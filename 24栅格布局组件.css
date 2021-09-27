@@ -1,5 +1,6 @@
 :root{
     --unitlenth: calc(100% / 24);
+    --gap:0px;
 }
 * {
     margin:0;
@@ -9,6 +10,49 @@
 .row{
     flex-wrap: wrap;
 }
+
+/*消除gap长度*/
+.variable-4{
+    --gap:4px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+.variable-8{
+    --gap:8px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+.variable-12{
+    --gap:12px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+.variable-16{
+    --gap:16px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+.variable-20{
+    --gap:20px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+.variable-24{
+    --gap:24px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+.variable-28{
+    --gap:28px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+.variable-32{
+    --gap:32px;
+    /*8px，12px，16px，20px，24px，28px，32px*/
+    --unitplenth:calc( calc(100% + var(--gap)) / 24);
+}
+/*消除gap长度*/
 
 
 
@@ -112,76 +156,76 @@
     background-color: blue;
 }
 .col-xs-1{
-    flex-basis: calc(var(--unitlenth) * 1);
+    flex-basis: calc(calc(var(--unitlenth) * 1) - var(--gap));
 }
 .col-xs-2{
-    flex-basis: calc(var(--unitlenth) * 2);
+    flex-basis: calc(calc(var(--unitlenth) * 2) - var(--gap));
 }
 .col-xs-3{
-    flex-basis: calc(var(--unitlenth) * 3);
+    flex-basis: calc(calc(var(--unitlenth) * 3) - var(--gap));
 }
 .col-xs-4{
-    flex-basis: calc(var(--unitlenth) * 4);
+    flex-basis: calc(calc(var(--unitlenth) * 4) - var(--gap));
 }
 .col-xs-5{
-    flex-basis: calc(var(--unitlenth) * 5);
+    flex-basis: calc(calc(var(--unitlenth) * 5) - var(--gap))
 }
 .col-xs-6{
-    flex-basis: calc(var(--unitlenth) * 6);
+    flex-basis: calc(calc(var(--unitlenth) * 6) - var(--gap))
 }
 .col-xs-7{
-    flex-basis: calc(var(--unitlenth) * 7);
+    flex-basis: calc(calc(var(--unitlenth) * 7) - var(--gap))
 }
 .col-xs-8{
-    flex-basis: calc(var(--unitlenth) * 8);
+    flex-basis: calc(calc(var(--unitlenth) * 8) - var(--gap))
 }
 .col-xs-9{
-    flex-basis: calc(var(--unitlenth) * 9);
+    flex-basis: calc(calc(var(--unitlenth) * 9) - var(--gap))
 }
 .col-xs-10{
-    flex-basis: calc(var(--unitlenth) * 10);
+    flex-basis: calc(calc(var(--unitlenth) * 10) - var(--gap))
 }
 .col-xs-11{
-    flex-basis: calc(var(--unitlenth) * 11);
+    flex-basis: calc(calc(var(--unitlenth) * 11) - var(--gap))
 }
 .col-xs-12{
-    flex-basis: calc(var(--unitlenth) * 12);
+    flex-basis: calc(calc(var(--unitlenth) * 12) - var(--gap))
 }
 .col-xs-13{
-    flex-basis: calc(var(--unitlenth) * 13);
+    flex-basis: calc(calc(var(--unitlenth) * 13) - var(--gap))
 }
 .col-xs-14{
-    flex-basis: calc(var(--unitlenth) * 14);
+    flex-basis: calc(calc(var(--unitlenth) * 14) - var(--gap))
 }
 .col-xs-15{
-    flex-basis: calc(var(--unitlenth) * 15);
+    flex-basis: calc(calc(var(--unitlenth) * 15) - var(--gap))
 }
 .col-xs-16{
-    flex-basis: calc(var(--unitlenth) * 16);
+    flex-basis: calc(calc(var(--unitlenth) * 16) - var(--gap))
 }
 .col-xs-17{
-    flex-basis: calc(var(--unitlenth) * 17);
+    flex-basis: calc(calc(var(--unitlenth) * 17) - var(--gap))
 }
 .col-xs-18{
-    flex-basis: calc(var(--unitlenth) * 18);
+    flex-basis: calc(calc(var(--unitlenth) * 18) - var(--gap))
 }
 .col-xs-19{
-    flex-basis: calc(var(--unitlenth) * 19);
+    flex-basis: calc(calc(var(--unitlenth) * 19) - var(--gap))
 }
 .col-xs-20{
-    flex-basis: calc(var(--unitlenth) * 20);
+    flex-basis: calc(calc(var(--unitlenth) * 20) - var(--gap))
 }
 .col-xs-21{
-    flex-basis: calc(var(--unitlenth) * 21);
+    flex-basis: calc(calc(var(--unitlenth) * 21) - var(--gap))
 }
 .col-xs-22{
-    flex-basis: calc(var(--unitlenth) * 22);
+    flex-basis: calc(calc(var(--unitlenth) * 22) - var(--gap))
 }
 .col-xs-23{
-    flex-basis: calc(var(--unitlenth) * 23);
+    flex-basis: calc(calc(var(--unitlenth) * 23) - var(--gap))
 }
 .col-xs-24{
-    flex-basis: calc(var(--unitlenth) * 24);
+    flex-basis: calc(calc(var(--unitlenth) * 24) - var(--gap))
 }
 
 /*屏幕<576px时的边距*/
@@ -623,76 +667,76 @@
         background-color: green;
     }
     .col-sm-1{
-        flex-basis: calc(var(--unitlenth) * 1);
+        flex-basis: calc(calc(var(--unitlenth) * 1) - var(--gap));
     }
     .col-sm-2{
-        flex-basis: calc(var(--unitlenth) * 2);
+        flex-basis: calc(calc(var(--unitlenth) * 2) - var(--gap));
     }
     .col-sm-3{
-        flex-basis: calc(var(--unitlenth) * 3);
+        flex-basis: calc(calc(var(--unitlenth) * 3) - var(--gap));
     }
     .col-sm-4{
-        flex-basis: calc(var(--unitlenth) * 4);
+        flex-basis: calc(calc(var(--unitlenth) * 4) - var(--gap));
     }
     .col-sm-5{
-        flex-basis: calc(var(--unitlenth) * 5);
+        flex-basis: calc(calc(var(--unitlenth) * 5) - var(--gap))
     }
     .col-sm-6{
-        flex-basis: calc(var(--unitlenth) * 6);
+        flex-basis: calc(calc(var(--unitlenth) * 6) - var(--gap))
     }
     .col-sm-7{
-        flex-basis: calc(var(--unitlenth) * 7);
+        flex-basis: calc(calc(var(--unitlenth) * 7) - var(--gap))
     }
     .col-sm-8{
-        flex-basis: calc(var(--unitlenth) * 8);
+        flex-basis: calc(calc(var(--unitlenth) * 8) - var(--gap))
     }
     .col-sm-9{
-        flex-basis: calc(var(--unitlenth) * 9);
+        flex-basis: calc(calc(var(--unitlenth) * 9) - var(--gap))
     }
     .col-sm-10{
-        flex-basis: calc(var(--unitlenth) * 10);
+        flex-basis: calc(calc(var(--unitlenth) * 10) - var(--gap))
     }
     .col-sm-11{
-        flex-basis: calc(var(--unitlenth) * 11);
+        flex-basis: calc(calc(var(--unitlenth) * 11) - var(--gap))
     }
     .col-sm-12{
-        flex-basis: calc(var(--unitlenth) * 12);
+        flex-basis: calc(calc(var(--unitlenth) * 12) - var(--gap))
     }
     .col-sm-13{
-        flex-basis: calc(var(--unitlenth) * 13);
+        flex-basis: calc(calc(var(--unitlenth) * 13) - var(--gap))
     }
     .col-sm-14{
-        flex-basis: calc(var(--unitlenth) * 14);
+        flex-basis: calc(calc(var(--unitlenth) * 14) - var(--gap))
     }
     .col-sm-15{
-        flex-basis: calc(var(--unitlenth) * 15);
+        flex-basis: calc(calc(var(--unitlenth) * 15) - var(--gap))
     }
     .col-sm-16{
-        flex-basis: calc(var(--unitlenth) * 16);
+        flex-basis: calc(calc(var(--unitlenth) * 16) - var(--gap))
     }
     .col-sm-17{
-        flex-basis: calc(var(--unitlenth) * 17);
+        flex-basis: calc(calc(var(--unitlenth) * 17) - var(--gap))
     }
     .col-sm-18{
-        flex-basis: calc(var(--unitlenth) * 18);
+        flex-basis: calc(calc(var(--unitlenth) * 18) - var(--gap))
     }
     .col-sm-19{
-        flex-basis: calc(var(--unitlenth) * 19);
+        flex-basis: calc(calc(var(--unitlenth) * 19) - var(--gap))
     }
     .col-sm-20{
-        flex-basis: calc(var(--unitlenth) * 20);
+        flex-basis: calc(calc(var(--unitlenth) * 20) - var(--gap))
     }
     .col-sm-21{
-        flex-basis: calc(var(--unitlenth) * 21);
+        flex-basis: calc(calc(var(--unitlenth) * 21) - var(--gap))
     }
     .col-sm-22{
-        flex-basis: calc(var(--unitlenth) * 22);
+        flex-basis: calc(calc(var(--unitlenth) * 22) - var(--gap))
     }
     .col-sm-23{
-        flex-basis: calc(var(--unitlenth) * 23);
+        flex-basis: calc(calc(var(--unitlenth) * 23) - var(--gap))
     }
     .col-sm-24{
-        flex-basis: calc(var(--unitlenth) * 24);
+        flex-basis: calc(calc(var(--unitlenth) * 24) - var(--gap))
     }
 /*屏幕 ≥ 576px时的元素边距*/
     .offset-sm-1{
@@ -1132,76 +1176,76 @@
         background-color: red;
     }
     .col-md-1{
-        flex-basis: calc(var(--unitlenth) * 1);
+        flex-basis: calc(calc(var(--unitlenth) * 1) - var(--gap));
     }
     .col-md-2{
-        flex-basis: calc(var(--unitlenth) * 2);
+        flex-basis: calc(calc(var(--unitlenth) * 2) - var(--gap));
     }
     .col-md-3{
-        flex-basis: calc(var(--unitlenth) * 3);
+        flex-basis: calc(calc(var(--unitlenth) * 3) - var(--gap));
     }
     .col-md-4{
-        flex-basis: calc(var(--unitlenth) * 4);
+        flex-basis: calc(calc(var(--unitlenth) * 4) - var(--gap));
     }
     .col-md-5{
-        flex-basis: calc(var(--unitlenth) * 5);
+        flex-basis: calc(calc(var(--unitlenth) * 5) - var(--gap))
     }
     .col-md-6{
-        flex-basis: calc(var(--unitlenth) * 6);
+        flex-basis: calc(calc(var(--unitlenth) * 6) - var(--gap))
     }
     .col-md-7{
-        flex-basis: calc(var(--unitlenth) * 7);
+        flex-basis: calc(calc(var(--unitlenth) * 7) - var(--gap))
     }
     .col-md-8{
-        flex-basis: calc(var(--unitlenth) * 8);
+        flex-basis: calc(calc(var(--unitlenth) * 8) - var(--gap))
     }
     .col-md-9{
-        flex-basis: calc(var(--unitlenth) * 9);
+        flex-basis: calc(calc(var(--unitlenth) * 9) - var(--gap))
     }
     .col-md-10{
-        flex-basis: calc(var(--unitlenth) * 10);
+        flex-basis: calc(calc(var(--unitlenth) * 10) - var(--gap))
     }
     .col-md-11{
-        flex-basis: calc(var(--unitlenth) * 11);
+        flex-basis: calc(calc(var(--unitlenth) * 11) - var(--gap))
     }
     .col-md-12{
-        flex-basis: calc(var(--unitlenth) * 12);
+        flex-basis: calc(calc(var(--unitlenth) * 12) - var(--gap))
     }
     .col-md-13{
-        flex-basis: calc(var(--unitlenth) * 13);
+        flex-basis: calc(calc(var(--unitlenth) * 13) - var(--gap))
     }
     .col-md-14{
-        flex-basis: calc(var(--unitlenth) * 14);
+        flex-basis: calc(calc(var(--unitlenth) * 14) - var(--gap))
     }
     .col-md-15{
-        flex-basis: calc(var(--unitlenth) * 15);
+        flex-basis: calc(calc(var(--unitlenth) * 15) - var(--gap))
     }
     .col-md-16{
-        flex-basis: calc(var(--unitlenth) * 16);
+        flex-basis: calc(calc(var(--unitlenth) * 16) - var(--gap))
     }
     .col-md-17{
-        flex-basis: calc(var(--unitlenth) * 17);
+        flex-basis: calc(calc(var(--unitlenth) * 17) - var(--gap))
     }
     .col-md-18{
-        flex-basis: calc(var(--unitlenth) * 18);
+        flex-basis: calc(calc(var(--unitlenth) * 18) - var(--gap))
     }
     .col-md-19{
-        flex-basis: calc(var(--unitlenth) * 19);
+        flex-basis: calc(calc(var(--unitlenth) * 19) - var(--gap))
     }
     .col-md-20{
-        flex-basis: calc(var(--unitlenth) * 20);
+        flex-basis: calc(calc(var(--unitlenth) * 20) - var(--gap))
     }
     .col-md-21{
-        flex-basis: calc(var(--unitlenth) * 21);
+        flex-basis: calc(calc(var(--unitlenth) * 21) - var(--gap))
     }
     .col-md-22{
-        flex-basis: calc(var(--unitlenth) * 22);
+        flex-basis: calc(calc(var(--unitlenth) * 22) - var(--gap))
     }
     .col-md-23{
-        flex-basis: calc(var(--unitlenth) * 23);
+        flex-basis: calc(calc(var(--unitlenth) * 23) - var(--gap))
     }
     .col-md-24{
-        flex-basis: calc(var(--unitlenth) * 24);
+        flex-basis: calc(calc(var(--unitlenth) * 24) - var(--gap))
     }
 /*屏幕 ≥ 768px时的元素边距*/
     .offset-md-1{
@@ -1639,76 +1683,76 @@
         background-color: yellow;
     }
     .col-lg-1{
-        flex-basis: calc(var(--unitlenth) * 1);
+        flex-basis: calc(calc(var(--unitlenth) * 1) - var(--gap));
     }
     .col-lg-2{
-        flex-basis: calc(var(--unitlenth) * 2);
+        flex-basis: calc(calc(var(--unitlenth) * 2) - var(--gap));
     }
     .col-lg-3{
-        flex-basis: calc(var(--unitlenth) * 3);
+        flex-basis: calc(calc(var(--unitlenth) * 3) - var(--gap));
     }
     .col-lg-4{
-        flex-basis: calc(var(--unitlenth) * 4);
+        flex-basis: calc(calc(var(--unitlenth) * 4) - var(--gap));
     }
     .col-lg-5{
-        flex-basis: calc(var(--unitlenth) * 5);
+        flex-basis: calc(calc(var(--unitlenth) * 5) - var(--gap))
     }
     .col-lg-6{
-        flex-basis: calc(var(--unitlenth) * 6);
+        flex-basis: calc(calc(var(--unitlenth) * 6) - var(--gap))
     }
     .col-lg-7{
-        flex-basis: calc(var(--unitlenth) * 7);
+        flex-basis: calc(calc(var(--unitlenth) * 7) - var(--gap))
     }
     .col-lg-8{
-        flex-basis: calc(var(--unitlenth) * 8);
+        flex-basis: calc(calc(var(--unitlenth) * 8) - var(--gap))
     }
     .col-lg-9{
-        flex-basis: calc(var(--unitlenth) * 9);
+        flex-basis: calc(calc(var(--unitlenth) * 9) - var(--gap))
     }
     .col-lg-10{
-        flex-basis: calc(var(--unitlenth) * 10);
+        flex-basis: calc(calc(var(--unitlenth) * 10) - var(--gap))
     }
     .col-lg-11{
-        flex-basis: calc(var(--unitlenth) * 11);
+        flex-basis: calc(calc(var(--unitlenth) * 11) - var(--gap))
     }
     .col-lg-12{
-        flex-basis: calc(var(--unitlenth) * 12);
+        flex-basis: calc(calc(var(--unitlenth) * 12) - var(--gap))
     }
     .col-lg-13{
-        flex-basis: calc(var(--unitlenth) * 13);
+        flex-basis: calc(calc(var(--unitlenth) * 13) - var(--gap))
     }
     .col-lg-14{
-        flex-basis: calc(var(--unitlenth) * 14);
+        flex-basis: calc(calc(var(--unitlenth) * 14) - var(--gap))
     }
     .col-lg-15{
-        flex-basis: calc(var(--unitlenth) * 15);
+        flex-basis: calc(calc(var(--unitlenth) * 15) - var(--gap))
     }
     .col-lg-16{
-        flex-basis: calc(var(--unitlenth) * 16);
+        flex-basis: calc(calc(var(--unitlenth) * 16) - var(--gap))
     }
     .col-lg-17{
-        flex-basis: calc(var(--unitlenth) * 17);
+        flex-basis: calc(calc(var(--unitlenth) * 17) - var(--gap))
     }
     .col-lg-18{
-        flex-basis: calc(var(--unitlenth) * 18);
+        flex-basis: calc(calc(var(--unitlenth) * 18) - var(--gap))
     }
     .col-lg-19{
-        flex-basis: calc(var(--unitlenth) * 19);
+        flex-basis: calc(calc(var(--unitlenth) * 19) - var(--gap))
     }
     .col-lg-20{
-        flex-basis: calc(var(--unitlenth) * 20);
+        flex-basis: calc(calc(var(--unitlenth) * 20) - var(--gap))
     }
     .col-lg-21{
-        flex-basis: calc(var(--unitlenth) * 21);
+        flex-basis: calc(calc(var(--unitlenth) * 21) - var(--gap))
     }
     .col-lg-22{
-        flex-basis: calc(var(--unitlenth) * 22);
+        flex-basis: calc(calc(var(--unitlenth) * 22) - var(--gap))
     }
     .col-lg-23{
-        flex-basis: calc(var(--unitlenth) * 23);
+        flex-basis: calc(calc(var(--unitlenth) * 23) - var(--gap))
     }
     .col-lg-24{
-        flex-basis: calc(var(--unitlenth) * 24);
+        flex-basis: calc(calc(var(--unitlenth) * 24) - var(--gap))
     }
 /*屏幕 ≥ 992px时的元素边距*/
     .offset-lg-1{
@@ -2147,76 +2191,76 @@
         background-color: slateblue;
     }
     .col-xl-1{
-        flex-basis: calc(var(--unitlenth) * 1);
+        flex-basis: calc(calc(var(--unitlenth) * 1) - var(--gap));
     }
     .col-xl-2{
-        flex-basis: calc(var(--unitlenth) * 2);
+        flex-basis: calc(calc(var(--unitlenth) * 2) - var(--gap));
     }
     .col-xl-3{
-        flex-basis: calc(var(--unitlenth) * 3);
+        flex-basis: calc(calc(var(--unitlenth) * 3) - var(--gap));
     }
     .col-xl-4{
-        flex-basis: calc(var(--unitlenth) * 4);
+        flex-basis: calc(calc(var(--unitlenth) * 4) - var(--gap));
     }
     .col-xl-5{
-        flex-basis: calc(var(--unitlenth) * 5);
+        flex-basis: calc(calc(var(--unitlenth) * 5) - var(--gap))
     }
     .col-xl-6{
-        flex-basis: calc(var(--unitlenth) * 6);
+        flex-basis: calc(calc(var(--unitlenth) * 6) - var(--gap))
     }
     .col-xl-7{
-        flex-basis: calc(var(--unitlenth) * 7);
+        flex-basis: calc(calc(var(--unitlenth) * 7) - var(--gap))
     }
     .col-xl-8{
-        flex-basis: calc(var(--unitlenth) * 8);
+        flex-basis: calc(calc(var(--unitlenth) * 8) - var(--gap))
     }
     .col-xl-9{
-        flex-basis: calc(var(--unitlenth) * 9);
+        flex-basis: calc(calc(var(--unitlenth) * 9) - var(--gap))
     }
     .col-xl-10{
-        flex-basis: calc(var(--unitlenth) * 10);
+        flex-basis: calc(calc(var(--unitlenth) * 10) - var(--gap))
     }
     .col-xl-11{
-        flex-basis: calc(var(--unitlenth) * 11);
+        flex-basis: calc(calc(var(--unitlenth) * 11) - var(--gap))
     }
     .col-xl-12{
-        flex-basis: calc(var(--unitlenth) * 12);
+        flex-basis: calc(calc(var(--unitlenth) * 12) - var(--gap))
     }
     .col-xl-13{
-        flex-basis: calc(var(--unitlenth) * 13);
+        flex-basis: calc(calc(var(--unitlenth) * 13) - var(--gap))
     }
     .col-xl-14{
-        flex-basis: calc(var(--unitlenth) * 14);
+        flex-basis: calc(calc(var(--unitlenth) * 14) - var(--gap))
     }
     .col-xl-15{
-        flex-basis: calc(var(--unitlenth) * 15);
+        flex-basis: calc(calc(var(--unitlenth) * 15) - var(--gap))
     }
     .col-xl-16{
-        flex-basis: calc(var(--unitlenth) * 16);
+        flex-basis: calc(calc(var(--unitlenth) * 16) - var(--gap))
     }
     .col-xl-17{
-        flex-basis: calc(var(--unitlenth) * 17);
+        flex-basis: calc(calc(var(--unitlenth) * 17) - var(--gap))
     }
     .col-xl-18{
-        flex-basis: calc(var(--unitlenth) * 18);
+        flex-basis: calc(calc(var(--unitlenth) * 18) - var(--gap))
     }
     .col-xl-19{
-        flex-basis: calc(var(--unitlenth) * 19);
+        flex-basis: calc(calc(var(--unitlenth) * 19) - var(--gap))
     }
     .col-xl-20{
-        flex-basis: calc(var(--unitlenth) * 20);
+        flex-basis: calc(calc(var(--unitlenth) * 20) - var(--gap))
     }
     .col-xl-21{
-        flex-basis: calc(var(--unitlenth) * 21);
+        flex-basis: calc(calc(var(--unitlenth) * 21) - var(--gap))
     }
     .col-xl-22{
-        flex-basis: calc(var(--unitlenth) * 22);
+        flex-basis: calc(calc(var(--unitlenth) * 22) - var(--gap))
     }
     .col-xl-23{
-        flex-basis: calc(var(--unitlenth) * 23);
+        flex-basis: calc(calc(var(--unitlenth) * 23) - var(--gap))
     }
     .col-xl-24{
-        flex-basis: calc(var(--unitlenth) * 24);
+        flex-basis: calc(calc(var(--unitlenth) * 24) - var(--gap))
     }
 /*屏幕 ≥ 1200px时的元素边距*/
     .offset-xl-1{
@@ -2655,76 +2699,76 @@
         background-color: pink;
     }
     .col-xxl-1{
-        flex-basis: calc(var(--unitlenth) * 1);
+        flex-basis: calc(calc(var(--unitlenth) * 1) - var(--gap));
     }
     .col-xxl-2{
-        flex-basis: calc(var(--unitlenth) * 2);
+        flex-basis: calc(calc(var(--unitlenth) * 2) - var(--gap));
     }
     .col-xxl-3{
-        flex-basis: calc(var(--unitlenth) * 3);
+        flex-basis: calc(calc(var(--unitlenth) * 3) - var(--gap));
     }
     .col-xxl-4{
-        flex-basis: calc(var(--unitlenth) * 4);
+        flex-basis: calc(calc(var(--unitlenth) * 4) - var(--gap));
     }
     .col-xxl-5{
-        flex-basis: calc(var(--unitlenth) * 5);
+        flex-basis: calc(calc(var(--unitlenth) * 5) - var(--gap))
     }
     .col-xxl-6{
-        flex-basis: calc(var(--unitlenth) * 6);
+        flex-basis: calc(calc(var(--unitlenth) * 6) - var(--gap))
     }
     .col-xxl-7{
-        flex-basis: calc(var(--unitlenth) * 7);
+        flex-basis: calc(calc(var(--unitlenth) * 7) - var(--gap))
     }
     .col-xxl-8{
-        flex-basis: calc(var(--unitlenth) * 8);
+        flex-basis: calc(calc(var(--unitlenth) * 8) - var(--gap))
     }
     .col-xxl-9{
-        flex-basis: calc(var(--unitlenth) * 9);
+        flex-basis: calc(calc(var(--unitlenth) * 9) - var(--gap))
     }
     .col-xxl-10{
-        flex-basis: calc(var(--unitlenth) * 10);
+        flex-basis: calc(calc(var(--unitlenth) * 10) - var(--gap))
     }
     .col-xxl-11{
-        flex-basis: calc(var(--unitlenth) * 11);
+        flex-basis: calc(calc(var(--unitlenth) * 11) - var(--gap))
     }
     .col-xxl-12{
-        flex-basis: calc(var(--unitlenth) * 12);
+        flex-basis: calc(calc(var(--unitlenth) * 12) - var(--gap))
     }
     .col-xxl-13{
-        flex-basis: calc(var(--unitlenth) * 13);
+        flex-basis: calc(calc(var(--unitlenth) * 13) - var(--gap))
     }
     .col-xxl-14{
-        flex-basis: calc(var(--unitlenth) * 14);
+        flex-basis: calc(calc(var(--unitlenth) * 14) - var(--gap))
     }
     .col-xxl-15{
-        flex-basis: calc(var(--unitlenth) * 15);
+        flex-basis: calc(calc(var(--unitlenth) * 15) - var(--gap))
     }
     .col-xxl-16{
-        flex-basis: calc(var(--unitlenth) * 16);
+        flex-basis: calc(calc(var(--unitlenth) * 16) - var(--gap))
     }
     .col-xxl-17{
-        flex-basis: calc(var(--unitlenth) * 17);
+        flex-basis: calc(calc(var(--unitlenth) * 17) - var(--gap))
     }
     .col-xxl-18{
-        flex-basis: calc(var(--unitlenth) * 18);
+        flex-basis: calc(calc(var(--unitlenth) * 18) - var(--gap))
     }
     .col-xxl-19{
-        flex-basis: calc(var(--unitlenth) * 19);
+        flex-basis: calc(calc(var(--unitlenth) * 19) - var(--gap))
     }
     .col-xxl-20{
-        flex-basis: calc(var(--unitlenth) * 20);
+        flex-basis: calc(calc(var(--unitlenth) * 20) - var(--gap))
     }
     .col-xxl-21{
-        flex-basis: calc(var(--unitlenth) * 21);
+        flex-basis: calc(calc(var(--unitlenth) * 21) - var(--gap))
     }
     .col-xxl-22{
-        flex-basis: calc(var(--unitlenth) * 22);
+        flex-basis: calc(calc(var(--unitlenth) * 22) - var(--gap))
     }
     .col-xxl-23{
-        flex-basis: calc(var(--unitlenth) * 23);
+        flex-basis: calc(calc(var(--unitlenth) * 23) - var(--gap))
     }
     .col-xxl-24{
-        flex-basis: calc(var(--unitlenth) * 24);
+        flex-basis: calc(calc(var(--unitlenth) * 24) - var(--gap))
     }
 /*屏幕 ≥ 1600px时的元素边距*/
     .offset-xxl-1{
