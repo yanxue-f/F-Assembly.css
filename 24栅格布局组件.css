@@ -9,43 +9,47 @@
 .row{
     flex-wrap: wrap;
 }
-.justify-start{
+
+
+
+/*屏幕<576px时的对其方式*/
+.justify-xs-start{
     justify-content: flex-start;
 }
-.justify-center{
+.justify-xs-center{
     justify-content: center;
 }
-.justify-end{
+.justify-xs-end{
     justify-content: flex-end;
 }
-.justify-between{
+.justify-xs-between{
     justify-content: space-between;
 }
-.justify-around{
+.justify-xs-around{
     justify-content: space-around;
 }
-.justify-evenly{
+.justify-xs-evenly{
     justify-content: space-evenly;
 }
-.align-start{
+.align-xs-start{
     align-items: flex-start;
 }
-.align-center{
+.align-xs-center{
     align-items: center;
 }
-.align-end{
+.align-xs-end{
     align-items: flex-end;
 }
-.align-self-start{
+/*屏幕<576px时item对其方式*/
+.align-self-xs-start{
     align-self: flex-start;
 }
-.align-self-center{
+.align-self-xs-center{
     align-self: center;
 }
-.align-self-end{
+.align-self-xs-end{
     align-self: flex-end;
 }
-
 /*屏幕<576px时的格式*/
 .no-stackable{
     display: flex;
@@ -74,8 +78,7 @@
 .gutter-xs-32{
     gap: 32px;
 }
-
-
+/*屏幕<576px时的元素长度*/
 .col-xs{
     flex-grow: 1;
     flex-shrink: 0;
@@ -181,7 +184,7 @@
     flex-basis: calc(var(--unitlenth) * 24);
 }
 
-
+/*屏幕<576px时的边距*/
 .offset-xs-1{
     margin-left:calc(var(--unitlenth) * 1 );
 }
@@ -251,8 +254,7 @@
 .offset-xs-23{
     margin-left:calc(var(--unitlenth) * 23);
 }
-
-
+/*屏幕<576px时的右偏移*/
 .push-xs-1,
 .push-xs-2,
 .push-xs-3,
@@ -347,7 +349,7 @@
 .push-xs-23{
     left: calc(var(--unitlenth) * 23 );
 }
-
+/*屏幕<576px时的左偏移*/
 .pull-xs-1,
 .pull-xs-2,
 .pull-xs-3,
@@ -442,7 +444,7 @@
 .pull-xs-23{
     right: calc(var(--unitlenth) * 23);
 }
-
+/*屏幕<576px时的元素的位置*/
 .order-xs-1{
     order: 1;
 }
@@ -524,7 +526,45 @@
     .row{
         display: flex;
     }
-    /*屏幕 ≥ 576px时的元素间隔*/
+/*屏幕≥ 576px时的对其方式*/
+    .justify-sm-start{
+        justify-content: flex-start;
+    }
+    .justify-sm-center{
+        justify-content: center;
+    }
+    .justify-sm-end{
+        justify-content: flex-end;
+    }
+    .justify-sm-between{
+        justify-content: space-between;
+    }
+    .justify-sm-around{
+        justify-content: space-around;
+    }
+    .justify-sm-evenly{
+        justify-content: space-evenly;
+    }
+    .align-sm-start{
+        align-items: flex-start;
+    }
+    .align-sm-center{
+        align-items: center;
+    }
+    .align-sm-end{
+        align-items: flex-end;
+    }
+/*屏幕≥ 576px时item对其方式*/
+    .align-self-sm-start{
+        align-self: flex-start;
+    }
+    .align-self-sm-center{
+        align-self: center;
+    }
+    .align-self-sm-end{
+        align-self: flex-end;
+    }
+/*屏幕 ≥ 576px时的元素间隔*/
     .gutter-sm-4{
         gap: 4px;
     }
@@ -549,7 +589,7 @@
     .gutter-sm-32{
         gap: 32px;
     }
-    /*屏幕 ≥ 576px时的元素长度*/
+/*屏幕 ≥ 576px时的元素长度*/
     .col-sm{
         flex-grow: 1;
         flex-shrink: 0;
@@ -654,7 +694,7 @@
     .col-sm-24{
         flex-basis: calc(var(--unitlenth) * 24);
     }
-    /*屏幕 ≥ 576px时的元素边距*/
+/*屏幕 ≥ 576px时的元素边距*/
     .offset-sm-1{
         margin-left:calc(var(--unitlenth) * 1 );
     }
@@ -724,7 +764,7 @@
     .offset-sm-23{
         margin-left:calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 576px时的元素右移*/
+/*屏幕 ≥ 576px时的元素右移*/
     .push-sm-1,
     .push-sm-2,
     .push-sm-3,
@@ -994,7 +1034,46 @@
 
 /*屏幕 ≥ 768px时的格式*/
 @media screen and (min-width:768px){
-    /*屏幕 ≥ 768px时的元素间隔*/
+
+/*屏幕 ≥ 768px时的对其方式*/
+    .justify-md-start{
+        justify-content: flex-start;
+    }
+    .justify-md-center{
+        justify-content: center;
+    }
+    .justify-md-end{
+        justify-content: flex-end;
+    }
+    .justify-md-between{
+        justify-content: space-between;
+    }
+    .justify-md-around{
+        justify-content: space-around;
+    }
+    .justify-md-evenly{
+        justify-content: space-evenly;
+    }
+    .align-md-start{
+        align-items: flex-start;
+    }
+    .align-md-center{
+        align-items: center;
+    }
+    .align-md-end{
+        align-items: flex-end;
+    }
+/*屏幕 ≥ 768px时item对其方式*/
+    .align-self-md-start{
+        align-self: flex-start;
+    }
+    .align-self-md-center{
+        align-self: center;
+    }
+    .align-self-md-end{
+        align-self: flex-end;
+    }
+/*屏幕 ≥ 768px时的元素间隔*/
     .gutter-md-4{
         gap: 4px;
     }
@@ -1019,7 +1098,7 @@
     .gutter-md-32{
         gap: 32px;
     }
-    /*屏幕 ≥ 768px时的元素长度*/
+/*屏幕 ≥ 768px时的元素长度*/
     .col-md{
         flex-grow: 1;
         flex-shrink: 0;
@@ -1124,7 +1203,7 @@
     .col-md-24{
         flex-basis: calc(var(--unitlenth) * 24);
     }
-    /*屏幕 ≥ 768px时的元素边距*/
+/*屏幕 ≥ 768px时的元素边距*/
     .offset-md-1{
         margin-left:calc(var(--unitlenth) * 1 );
     }
@@ -1194,7 +1273,7 @@
     .offset-md-23{
         margin-left:calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 768px时的元素右移*/
+/*屏幕 ≥ 768px时的元素右移*/
     .push-md-1,
     .push-md-2,
     .push-md-3,
@@ -1289,7 +1368,7 @@
     .push-md-23{
         left: calc(var(--unitlenth) * 23 );
     }
-    /*屏幕 ≥ 768px时的元素左移*/
+/*屏幕 ≥ 768px时的元素左移*/
     .pull-md-1,
     .pull-md-2,
     .pull-md-3,
@@ -1384,7 +1463,7 @@
     .pull-md-23{
         right: calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 768px时的元素位置*/
+/*屏幕 ≥ 768px时的元素位置*/
     .order-md-1{
         order: 1;
     }
@@ -1463,8 +1542,45 @@
 
 /*屏幕 ≥ 992px时的格式*/
 @media screen and (min-width:992px){
-    
-    /*屏幕 ≥ 992px时的元素间隔*/
+/*屏幕 ≥ 992px时的对其方式*/
+    .justify-lg-start{
+        justify-content: flex-start;
+    }
+    .justify-lg-center{
+        justify-content: center;
+    }
+    .justify-lg-end{
+        justify-content: flex-end;
+    }
+    .justify-lg-between{
+        justify-content: space-between;
+    }
+    .justify-lg-around{
+        justify-content: space-around;
+    }
+    .justify-lg-evenly{
+        justify-content: space-evenly;
+    }
+    .align-lg-start{
+        align-items: flex-start;
+    }
+    .align-lg-center{
+        align-items: center;
+    }
+    .align-lg-end{
+        align-items: flex-end;
+    }
+/*屏幕 ≥ 992px时item对其方式*/
+    .align-self-lg-start{
+        align-self: flex-start;
+    }
+    .align-self-lg-center{
+        align-self: center;
+    }
+    .align-self-lg-end{
+        align-self: flex-end;
+    }
+/*屏幕 ≥ 992px时的元素间隔*/
     .gutter-lg-4{
         gap: 4px;
     }
@@ -1489,7 +1605,7 @@
     .gutter-lg-32{
         gap: 32px;
     }
-    /*屏幕 ≥ 992px时的元素长度*/
+/*屏幕 ≥ 992px时的元素长度*/
     .col-lg{
         flex-grow: 1;
         flex-shrink: 0;
@@ -1594,7 +1710,7 @@
     .col-lg-24{
         flex-basis: calc(var(--unitlenth) * 24);
     }
-    /*屏幕 ≥ 992px时的元素边距*/
+/*屏幕 ≥ 992px时的元素边距*/
     .offset-lg-1{
         margin-left:calc(var(--unitlenth) * 1 );
     }
@@ -1664,7 +1780,7 @@
     .offset-lg-23{
         margin-left:calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 992px时的元素右移*/
+/*屏幕 ≥ 992px时的元素右移*/
     .push-lg-1,
     .push-lg-2,
     .push-lg-3,
@@ -1759,7 +1875,7 @@
     .push-lg-23{
         left: calc(var(--unitlenth) * 23 );
     }
-    /*屏幕 ≥ 992px时的元素左移*/
+/*屏幕 ≥ 992px时的元素左移*/
     .pull-lg-1,
     .pull-lg-2,
     .pull-lg-3,
@@ -1854,7 +1970,7 @@
     .pull-lg-23{
         right: calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 992px时的元素位置*/
+/*屏幕 ≥ 992px时的元素位置*/
     .order-lg-1{
         order: 1;
     }
@@ -1934,8 +2050,45 @@
 
 /*屏幕 ≥ 1200px时的格式*/
 @media screen and (min-width:1200px){
-    
-    /*屏幕 ≥ 1200px时的元素间隔*/
+/*屏幕 ≥ 1200px时的对其方式*/
+    .justify-xl-start{
+        justify-content: flex-start;
+    }
+    .justify-xl-center{
+        justify-content: center;
+    }
+    .justify-xl-end{
+        justify-content: flex-end;
+    }
+    .justify-xl-between{
+        justify-content: space-between;
+    }
+    .justify-xl-around{
+        justify-content: space-around;
+    }
+    .justify-xl-evenly{
+        justify-content: space-evenly;
+    }
+    .align-xl-start{
+        align-items: flex-start;
+    }
+    .align-xl-center{
+        align-items: center;
+    }
+    .align-xl-end{
+        align-items: flex-end;
+    }
+/*屏幕 ≥ 1200px时item对其方式*/
+    .align-self-xl-start{
+        align-self: flex-start;
+    }
+    .align-self-xl-center{
+        align-self: center;
+    }
+    .align-self-xl-end{
+        align-self: flex-end;
+    }
+/*屏幕 ≥ 1200px时的元素间隔*/
     .gutter-xl-4{
         gap: 4px;
     }
@@ -1960,7 +2113,7 @@
     .gutter-xl-32{
         gap: 32px;
     }
-    /*屏幕 ≥ 1200px时的元素长度*/
+/*屏幕 ≥ 1200px时的元素长度*/
     .col-xl{
         flex-grow: 1;
         flex-shrink: 0;
@@ -2065,7 +2218,7 @@
     .col-xl-24{
         flex-basis: calc(var(--unitlenth) * 24);
     }
-    /*屏幕 ≥ 1200px时的元素边距*/
+/*屏幕 ≥ 1200px时的元素边距*/
     .offset-xl-1{
         margin-left:calc(var(--unitlenth) * 1 );
     }
@@ -2135,7 +2288,7 @@
     .offset-xl-23{
         margin-left:calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 1200px时的元素右移*/
+/*屏幕 ≥ 1200px时的元素右移*/
     .push-xl-1,
     .push-xl-2,
     .push-xl-3,
@@ -2230,7 +2383,7 @@
     .push-xl-23{
         left: calc(var(--unitlenth) * 23 );
     }
-    /*屏幕 ≥ 1200px时的元素左移*/
+/*屏幕 ≥ 1200px时的元素左移*/
     .pull-xl-1,
     .pull-xl-2,
     .pull-xl-3,
@@ -2325,7 +2478,7 @@
     .pull-xl-23{
         right: calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 1200px时的元素位置*/
+/*屏幕 ≥ 1200px时的元素位置*/
     .order-xl-1{
         order: 1;
     }
@@ -2405,8 +2558,45 @@
 
 /*屏幕 ≥ 1600px时的格式*/
 @media screen and (min-width:1600px){
-    
-    /*屏幕 ≥ 1600px时的元素间隔*/
+/*屏幕 ≥ 1600px时的对其方式*/
+    .justify-xxl-start{
+        justify-content: flex-start;
+    }
+    .justify-xxl-center{
+        justify-content: center;
+    }
+    .justify-xxl-end{
+        justify-content: flex-end;
+    }
+    .justify-xxl-between{
+        justify-content: space-between;
+    }
+    .justify-xxl-around{
+        justify-content: space-around;
+    }
+    .justify-xxl-evenly{
+        justify-content: space-evenly;
+    }
+    .align-xxl-start{
+        align-items: flex-start;
+    }
+    .align-xxl-center{
+        align-items: center;
+    }
+    .align-xxl-end{
+        align-items: flex-end;
+    }
+/*屏幕 ≥ 1600px时item对其方式*/
+    .align-self-xxl-start{
+        align-self: flex-start;
+    }
+    .align-self-xxl-center{
+        align-self: center;
+    }
+    .align-self-xxl-end{
+        align-self: flex-end;
+    }
+/*屏幕 ≥ 1600px时的元素间隔*/
     .gutter-xxl-4{
         gap: 4px;
     }
@@ -2431,7 +2621,7 @@
     .gutter-xxl-32{
         gap: 32px;
     }
-    /*屏幕 ≥ 1600px时的元素长度*/
+/*屏幕 ≥ 1600px时的元素长度*/
     .col-xxl{
         flex-grow: 1;
         flex-shrink: 0;
@@ -2536,7 +2726,7 @@
     .col-xxl-24{
         flex-basis: calc(var(--unitlenth) * 24);
     }
-    /*屏幕 ≥ 1600px时的元素边距*/
+/*屏幕 ≥ 1600px时的元素边距*/
     .offset-xxl-1{
         margin-left:calc(var(--unitlenth) * 1 );
     }
@@ -2606,7 +2796,7 @@
     .offset-xxl-23{
         margin-left:calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 1600px时的元素右移*/
+/*屏幕 ≥ 1600px时的元素右移*/
     .push-xxl-1,
     .push-xxl-2,
     .push-xxl-3,
@@ -2701,7 +2891,7 @@
     .push-xxl-23{
         left: calc(var(--unitlenth) * 23 );
     }
-    /*屏幕 ≥ 1600px时的元素左移*/
+/*屏幕 ≥ 1600px时的元素左移*/
     .pull-xxl-1,
     .pull-xxl-2,
     .pull-xxl-3,
@@ -2796,7 +2986,7 @@
     .pull-xxl-23{
         right: calc(var(--unitlenth) * 23);
     }
-    /*屏幕 ≥ 1600px时的元素位置*/
+/*屏幕 ≥ 1600px时的元素位置*/
     .order-xxl-1{
         order: 1;
     }
