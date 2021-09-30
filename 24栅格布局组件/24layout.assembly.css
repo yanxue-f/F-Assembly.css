@@ -597,9 +597,6 @@
 .row > .order-24{
     order: 24;
 }
-.row >:not([class *="col"]){
-    display: none;
-}
 
 
 /*响应*/
