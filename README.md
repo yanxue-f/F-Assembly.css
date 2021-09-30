@@ -24,4 +24,4 @@
 >>>>>+	lg 屏幕 ≥ 992px
 >>>>>+	xl 屏幕 ≥ 1200px
 >>>>>+	xxl 屏幕 ≥ 1600px
->>>(详细内容请查看演示 [https://fan-aoqiang.gitee.io/f-assembly.css])
+>>>(详细内容请查看演示[24 layout] <https://fan-aoqiang.gitee.io/f-assembly.css>)
