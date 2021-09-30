@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./24栅格布局组件.css">
+    <title>24栅格布局</title>
+</head>
+<body>
+    <div class="header" id="layou">
+        <h2>layou 布局</h2>
+        <p>将页面平均分为24列栅格，按照需求利用24栅格进行布局.</p>
+    </div>
+    <div class="layout" id="basics">
+        <h3>基础布局</h3>
+        <p>使用子元素平均占用栅格实现想要的布局.</p>
+        <div class="layout-img">
+            <div class="row no-stackable">
+                <div class="col"></div>
+            </div>
+            <div class="row ">
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row no-stackable">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row no-stackable">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row no-stackable">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中的row类实现flex布局，在no-stackable类下通过col类实现元素均分的栅格。加入no-stackable类实现col类元素在未设置断点时的自适应布局，删除no-stackable类col类元素占整行堆叠展示。
+                （仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackable类名col类子元素实现堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row no-stackable"&gt
+    &ltdiv class="col"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row "&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row no-stackable"&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row no-stackable"&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row no-stackable"&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+&lt/div&gt
+&ltstyle&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="gutter">
+        <h3>分栏间隔</h3>
+        <p>使用单一子元素之间有不同的间距的布局.</p>
+        <div class="layout-img">
+            <div class="row gutter-column-32  no-stackable">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row gutter-16 ">
+                <div class="col-12"></div>
+                <div class="col-12"></div>
+                <div class="col-24"></div>
+            </div>
+            <div class="row gutter-row-8 ">
+                <div class="col-24"></div>
+                <div class="col-24"></div>
+                
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中的row类元素种添加gutter-column-number类，实现元素的列间隔
+                添加gutter-row-number类，实现元素的行间隔（number=4，8，12，16，20，24，28，32）.
+                （仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row gutter-column-32  no-stackable" &gt
+    &ltdiv class="col" &gt &lt/div &gt
+    &ltdiv class="col" &gt &lt/div &gt
+    &ltdiv class="col" &gt &lt/div &gt
+    &ltdiv class="col" &gt &lt/div &gt
+    &ltdiv class="col" &gt &lt/div &gt
+&lt/div &gt
+ &ltdiv class="row gutter-column-16 " &gt
+    &ltdiv class="col" &gt &lt/div &gt
+    &ltdiv class="col" &gt &lt/div &gt
+    &ltdiv class="col" &gt &lt/div &gt
+&lt/div &gt
+&ltdiv class="row gutter-row-8 " &gt
+    &ltdiv class="col" &gt &lt/div &gt
+    &ltdiv class="col" &gt &lt/div &gt
+&lt/div &gt
+&ltstyle&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="blend">
+        <h3>混合布局</h3>
+        <p>使用单一子元素占不同数量的栅格或有不同的间距的布局.</p>
+        <div class="layout-img">
+            <div class="row gutter-column-32 ">
+                <div class="col-10"></div>
+                <div class="col-14"></div>
+            </div>
+            <div class="row gutter-column-32 no-stackable">
+                <div class="col-narrow">1</div>
+                <div class="col"></div>
+            </div>
+            <div class="row gutter-column-16 ">
+                <div class="col-7"></div>
+                <div class="col-8"></div>
+                <div class="col-9"></div>
+            </div>
+            <div class="row gutter-column-8 ">
+                <div class="col-5"></div>
+                <div class="col-6"></div>
+                <div class="col-6"></div>
+                <div class="col-7"></div>
+            </div>
+            <div class="row gutter-column-4 ">
+                <div class="col-1"></div>
+                <div class="col-7"></div>
+                <div class="col-2"></div>
+                <div class="col-6"></div>
+                <div class="col-3"></div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中col-number类实现元素所占的栅格数（1~24).col-narrow代表长度为内容的长度。（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row gutter-column-32 "&gt
+    &ltdiv class="col-10"&gt&lt/div&gt
+    &ltdiv class="col-14"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row gutter-column-32 no-stackable"&gt
+    &ltdiv class="col-narrow"&gt1&lt/div&gt
+    &ltdiv class="col"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row gutter-column-16 "&gt
+    &ltdiv class="col-7"&gt&lt/div&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-9"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row gutter-column-8 "&gt
+    &ltdiv class="col-5"&gt&lt/div&gt
+    &ltdiv class="col-6"&gt&lt/div&gt
+    &ltdiv class="col-6"&gt&lt/div&gt
+    &ltdiv class="col-7"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row gutter-column-4 "&gt
+    &ltdiv class="col-1"&gt&lt/div&gt
+    &ltdiv class="col-7"&gt&lt/div&gt
+    &ltdiv class="col-2"&gt&lt/div&gt
+    &ltdiv class="col-6"&gt&lt/div&gt
+    &ltdiv class="col-3"&gt&lt/div&gt
+    &ltdiv class="col-5"&gt&lt/div&gt
+&lt/div&gt
+&ltstyle&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>   
+    <div class="layout" id="justify">
+        <h3>主轴方向对其方式</h3>
+        <p>使子元素在主轴方向按照不同的方式排列。</p>
+        <div class="layout-img">
+            <div class="row  justify-start ">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row  justify-center ">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row  justify-end ">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row  justify-between ">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row  justify-around ">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row  justify-evenly ">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            
+        </div>
+        <div class="code">
+            <p>通过div组件中justify-cotent类实现元素主轴方向对其方式.content的值（start,end,center,between,around,evenly）（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row  justify-start "&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  justify-center "&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  justify-end "&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+&lt/div&gt
+    &ltdiv class="row  justify-between "&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  justify-around "&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  justify-evenly "&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+    &ltdiv class="col-4"&gt&lt/div&gt
+&lt/div&gt
+&ltstyle&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="align">
+        <h3>交叉方向对其方式</h3>
+        <p>使子元素在交叉方向按照不同的方式排列。</p>
+        <div class="layout-img">
+            <div class="row  align-start ">
+                <div class="col-8"></div>
+                <div class="col-8"></div>
+                <div class="col-8"></div>
+            </div>
+            <div class="row  align-center ">
+                <div class="col-8"></div>
+                <div class="col-8"></div>
+                <div class="col-8"></div>
+            </div>
+            <div class="row  align-end ">
+                <div class="col-8"></div>
+                <div class="col-8"></div>
+                <div class="col-8"></div>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中align-cotent类实现元素交叉轴方向对其方式.content的值（start,end,center）（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row  align-start n"&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  align-center "&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  align-end "&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+&ltstyle&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="item">
+        <h3>子元素交叉方向的对其方式</h3>
+        <p>使子元素在交叉方向按照想要的方式排列的方式排列。</p>
+        <div class="layout-img">
+            <div class="row  align-start ">
+                <div class="col-8"></div>
+                <div class="col-8 align-self-center"></div>
+                <div class="col-8 align-self-end"></div>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中align-self-cotent类实现子元素自己在交叉轴方向对其方式.content的值（start,end,center,between,around,evenly）（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row  align-start "&gt
+    &ltdiv class="col-8"&gt&lt/div&gt
+    &ltdiv class="col-8 align-self-center"&gt&lt/div&gt
+    &ltdiv class="col-8 align-self-end"&gt&lt/div&gt
+&lt/div&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="offset">
+        <h3>栅格左侧的间隔格数</h3>
+        <p>子元素相对左侧元素的间隔格数。</p>
+        <div class="layout-img">
+            <div class="row  ">
+                <div class="col-4 offset-1"></div>
+                <div class="col-4 offset-2"></div>
+                <div class="col-4 offset-3"></div>
+            </div>
+            <div class="row   ">
+                <div class="col-4 offset-3"></div>
+                <div class="col-4 offset-2"></div>
+                <div class="col-4 offset-1"></div>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中offset-number类实现元素距离左侧元素的间隔格数.number的值（1~24）。offset-number对其后面的子元素的位置有影响会使后面的子元素被推着移动相同的间隔数。（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row  align-start "&gt
+    &ltdiv class="col-8 offset-1"&gt&lt/div&gt
+    &ltdiv class="col-8 offset-2"&gt&lt/div&gt
+    &ltdiv class="col-8 offset-3"&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  align-center "&gt
+    &ltdiv class="col-8 offset-3"&gt&lt/div&gt
+    &ltdiv class="col-8 offset-2"&gt&lt/div&gt
+    &ltdiv class="col-8 offset-1"&gt&lt/div&gt
+&lt/div&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="push-pull">
+        <h3>左右两侧移动的距离</h3>
+        <p>push元素向右移动的距离/pull元素向左移动的距离</p>
+        <div class="layout-img">
+            <div class="row justify-center ">
+                <div class="col-4 ">1</div>
+                <div class="col-4 ">2</div>
+                <div class="col-4 ">3</div>
+            </div>
+            <div class="row  justify-center ">
+                <div class="col-4 push-12">1</div>
+                <div class="col-4 ">2</div>
+                <div class="col-4 pull-12">3</div>
+            </div>
+            <div class="row  justify-center ">
+                <div class="col-4 ">1</div>
+                <div class="col-4 push-8">2</div>
+                <div class="col-4 ">3</div>
+            </div>
+            <div class="row  justify-center ">
+                <div class="col-4 pull-4">1</div>
+                <div class="col-4 ">2</div>
+                <div class="col-4 push-4">3</div>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中push-number类实现元素向右移动的格数，pull-number类实现元素向左移动的格数.number的值（1~24）。push/pull不影响其他元素的位置。（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row justify-center "&gt
+    &ltdiv class="col-4 "&gt1&lt/div&gt
+    &ltdiv class="col-4 "&gt2&lt/div&gt
+    &ltdiv class="col-4 "&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  justify-center "&gt
+    &ltdiv class="col-4 push-12"&gt1&lt/div&gt
+    &ltdiv class="col-4 "&gt2&lt/div&gt
+    &ltdiv class="col-4 pull-12"&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  justify-center "&gt
+    &ltdiv class="col-4 "&gt1&lt/div&gt
+    &ltdiv class="col-4 push-8"&gt2&lt/div&gt
+    &ltdiv class="col-4 "&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row  justify-center "&gt
+    &ltdiv class="col-4 pull-4"&gt1&lt/div&gt
+    &ltdiv class="col-4 "&gt2&lt/div&gt
+    &ltdiv class="col-4 push-4"&gt3&lt/div&gt
+&lt/div&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="order">
+        <h3>子元素的排列顺序</h3>
+        <p>order定义子元素自身的排列顺序</p>
+        <div class="layout-img">
+            <div class="row  ">
+                <div class="col-8 ">1</div>
+                <div class="col-8 ">2</div>
+                <div class="col-8 ">3</div>
+            </div>
+            <div class="row ">
+                <div class="col-8 order-1">1</div>
+                <div class="col-8 order-3">2</div>
+                <div class="col-8 order-2">3</div>
+            </div>
+            <div class="row ">
+                <div class="col-8 order-2">1</div>
+                <div class="col-8 order-1">2</div>
+                <div class="col-8 order-3">3</div>
+            </div>
+            <div class="row ">
+                <div class="col-8 order-3">1</div>
+                <div class="col-8 order-2">2</div>
+                <div class="col-8 order-1">3</div>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过div组件中order-number类实现元素在排列顺序中的位置，order默认为0，number越小排列越靠前，当需要改变子元素的排列顺序时一般每一个子元素都需要设置order-number。</order-number>.number的值（1~24）。push/pull不影响其他元素的位置。（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row "&gt
+    &ltdiv class="col-4 "&gt1&lt/div&gt
+    &ltdiv class="col-4 "&gt2&lt/div&gt
+    &ltdiv class="col-4 "&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row"&gt
+    &ltdiv class="col-4 order-1"&gt1&lt/div&gt
+    &ltdiv class="col-4 order-3"&gt2&lt/div&gt
+    &ltdiv class="col-4 order-2"&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row "&gt
+    &ltdiv class="col-4 order-3"&gt1&lt/div&gt
+    &ltdiv class="col-4 order-2"&gt2&lt/div&gt
+    &ltdiv class="col-4 order-1"&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row "&gt
+    &ltdiv class="col-4 order-3"&gt1&lt/div&gt
+    &ltdiv class="col-4 order-2"&gt2&lt/div&gt
+    &ltdiv class="col-4 order-1"&gt3&lt/div&gt
+&lt/div&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="response">
+        <h3>响应式</h3>
+        <p>在不同的屏幕大小下展示不同的排雷方式</p>
+        <div class="layout-img">
+            <div class="row justify-xs-center justify-sm-start justify-md-end justify-lg-around justify-xl-evenly justify-xxl-between no-stackable">
+                <div class="col-xs-1 col-sm-3 col-md-5 col-lg-3 col-xl-8 col-xs-6 ">1</div>
+                <div class="col-xs-2 col-sm-4 col-md-8 col-lg-3 col-xl-4 col-xs-6 ">2</div>
+                <div class="col-xs-3 col-sm-5 col-md-4 col-lg-3 col-xl-8 col-xs-6">3</div>
+            </div>
+            <div class="row justify-xs-center justify-sm-start justify-md-end justify-lg-around justify-xl-evenly justify-xxl-between ">
+                <div class="col-xs-1 col-sm-3 col-md-5 col-lg-3 col-xl-8 col-xs-6 ">1</div>
+                <div class="col-xs-2 col-sm-4 col-md-8 col-lg-3 col-xl-4 col-xs-6 ">2</div>
+                <div class="col-xs-3 col-sm-5 col-md-4 col-lg-3 col-xl-8 col-xs-6">3</div>
+            </div>
+            
+        </div>
+        <div class="code">
+            <p>“xs”在屏幕 < 576px应用的样式; “sm”在屏幕 ≥ 576px应用的样式; “md”在屏幕 ≥ 768px应用的样式; “lg”在屏幕 ≥ 992px应用的样式; “xl”在屏幕 ≥ 1200px应用的样式; “xxl”在屏幕 ≥ 1600px应用的样式。
+                justify、col、offset、align、align-self、gutter、push、pull、order均可相应。（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row justify-xs-center justify-sm-start justify-md-end justify-lg-around justify-xl-evenly justify-xxl-between no-stackable"&gt
+    &ltdiv class="col-xs-1 col-sm-3 col-md-5 col-lg-3 col-xl-8 col-xs-6 "&gt1&lt/div&gt
+    &ltdiv class="col-xs-2 col-sm-4 col-md-8 col-lg-3 col-xl-4 col-xs-6 "&gt2&lt/div&gt
+    &ltdiv class="col-xs-3 col-sm-5 col-md-4 col-lg-3 col-xl-8 col-xs-6 "&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row justify-xs-center justify-sm-start justify-md-end justify-lg-around justify-xl-evenly justify-xxl-between "&gt
+    &ltdiv class="col-xs-1 col-sm-3 col-md-5 col-lg-3 col-xl-8 col-xs-6 "&gt1&lt/div&gt
+    &ltdiv class="col-xs-2 col-sm-4 col-md-8 col-lg-3 col-xl-4 col-xs-6 "&gt2&lt/div&gt
+    &ltdiv class="col-xs-3 col-sm-5 col-md-4 col-lg-3 col-xl-8 col-xs-6 "&gt3&lt/div&gt
+&lt/div&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="selectivity-response">
+        <h3>选择式响应式</h3>
+        <p>在不同的屏幕大小下展示不同的排版方式，断点有不同后缀的col开启，未出现时断点不开启其他子元素堆叠展示或自适应展示</p>
+        <div class="layout-img">
+            <div class="row gutter-4 no-stackable">
+                <div class="col col-xs-1">1</div>
+                <div class="col col-sm-2 ">2</div>
+                <div class="col col-md-3 ">3</div>
+                <div class="col col-lg-4 ">4</div>
+                <div class="col col-xl-5 ">5</div>
+                <div class="col col-xxl-6 ">6</div>
+               
+            </div>
+            <div class="row gutter-4">
+                <div class="col col-xs-1">1</div>
+                <div class="col col-sm-2 ">2</div>
+                <div class="col col-md-3 ">3</div>
+                <div class="col col-lg-4 ">4</div>
+                <div class="col col-xl-5 ">5</div>
+                <div class="col col-xxl-6 ">6</div>
+            </div>
+            
+        </div>
+        <div class="code">
+            <p>“xs”在屏幕 < 576px应用的样式; “sm”在屏幕 ≥ 576px应用的样式; “md”在屏幕 ≥ 768px应用的样式; “lg”在屏幕 ≥ 992px应用的样式; “xl”在屏幕 ≥ 1200px应用的样式; “xxl”在屏幕 ≥ 1600px应用的样式。
+                加入no-stackable类实现col类元素在未设置断点时的自适应布局，删除no-stackable类col类元素占整行堆叠展示。（仅在屏幕大小 < 576pxs时，加入no-stackable类实现flex布局，删除no-stackabl
+                e类名实现col类子元素堆叠展示。）</p>
+            <pre>
+                <code>
+&ltdiv class="row gutter-4 no-stackable"&gt
+    &ltdiv class="col col-xs-1"&gt1&lt/div&gt
+    &ltdiv class="col col-sm-2"&gt2&lt/div&gt
+    &ltdiv class="col col-md-3&gt3&lt/div&gt
+    &ltdiv class="col col-lg-4 "&gt3&lt/div&gt
+    &ltdiv class="col col-xl-5"&gt3&lt/div&gt
+    &ltdiv class="col col-xxl-6"&gt3&lt/div&gt
+&lt/div&gt
+&ltdiv class="row gutter-4"&gt
+    &ltdiv class="col col-xs-1"&gt1&lt/div&gt
+    &ltdiv class="col col-sm-2"&gt2&lt/div&gt
+    &ltdiv class="col col-md-3"&gt3&lt/div&gt
+    &ltdiv class="col col-lg-4"&gt3&lt/div&gt
+    &ltdiv class="col col-xl-5"&gt3&lt/div&gt
+    &ltdiv class="col col-xxl-6"&gt3&lt/div&gt
+&lt/div&gt
+    .row{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: rgb(233, 236, 236);
+    }
+    .row>div{
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgb(20, 129, 255);
+    }
+    .row>div:nth-child(even){
+        background-color: rgb(1, 207, 235);
+    }
+&lt/style&gt
+                </code>
+            </pre>
+        </div>
+    </div>
+    <nav class="nav">
+        <li>
+            <a href="#layou">栅格布局</a>
+        </li>
+        <li>
+            <a href="#basics">基础布局</a>
+        </li>
+        <li>
+            <a href="#gutter">分栏间隔</a>
+        </li>
+        <li>
+            <a href="#blend">混合布局</a>
+        </li>
+        <li>
+            <a href="#justify">主轴方向对其方式</a>
+        </li>
+        <li>
+            <a href="#align">交叉轴方向对其方式</a>
+        </li>
+        <li>
+            <a href="#item">子元素交叉方向对其方式</a>
+        </li>
+        <li>
+            <a href="#offset">元素左侧的间隔格数</a>
+        </li>
+        <li>
+            <a href="#push-pull">左右两侧移动的格数</a>
+        </li>
+        <li>
+            <a href="#order">子元素的排列顺序</a>
+        </li>
+        <li>
+            <a href="#response">响应式</a>
+        </li>
+        <li>
+            <a href="#selectivity-response">选择响应式</a>
+        </li>
+        
+    </nav>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: 1.5vh;
+            border: 3px outset rgb(69, 184, 250);
+            border-radius: 20px;
+            padding: 30px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            background-color: white;
+        }
+        h2{
+            color: rgb(0, 140, 255);
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: 2px;
+        }
+        h3{
+            color: rgb(0, 140, 255);
+            font-size: 20px;
+            font-weight: 550;
+            line-height: 40px;
+            letter-spacing: 2px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-indent: 2em;
+        }
+        .header{
+            margin-bottom: 30px;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .layout{ 
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .layout-img{
+            border:1px solid silver;
+            border-radius: 8px;
+            padding: 15px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+        .row{
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 4px;
+            border-radius: 5px;
+            background-color: rgb(233, 236, 236);
+        }
+        .row>div{
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(20, 129, 255);
+            text-align: center;
+            line-height: 30px;
+        }
+        .row>div:nth-child(even){
+            background-color: rgb(1, 207, 235);
+        }
+        .code{
+            
+            border:1px solid silver;
+            border-radius: 8px;
+            padding:10px 20px 0px;
+            
+        }
+        code{
+            display: block;
+            overflow: auto;
+            width: 100%;
+            color:rgb(0, 17, 255);
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            filter: brightness(120%);
+        }
+        pre{
+            border-top: 1px silver solid;
+        }
+        .align-start,.align-center,.align-end{
+            height: 90px;
+        }
+        nav{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            width: 18%;
+            height: calc(100vh - 20px);
+            left: 10px;
+            top: 10px;
+            border: 3px outset rgb(69, 184, 250);
+            border-radius: 8px;
+            background-color: white;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-right: 0.5vh;
+        }
+        li{
+            border-radius: 8px;
+            padding: 0px 3px;
+            text-align: center;
+            height: 7vh;
+            margin-bottom: 1vh;
+            border: 3px outset rgb(82, 81, 81);
+            background-color: rgb(165, 165, 165);
+        }
+        
+        li:hover>a{
+            color: rgb(27, 27, 37);
+        }
+        li:hover{
+            border: 3px outset rgb(99, 99, 99);
+            background-color: rgb(230, 230, 230);
+        }
+        li:active{
+            border: 3px inset rgb(56, 56, 56);
+            background-color: rgb(165, 165, 165);
+        }
+        li:active>a{
+            color: white;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height:calc(7vh - 8px);
+            width: 100%;
+            height: 100%;
+        }
+        html{
+            background-color: rgb(197, 222, 223);
+            scroll-behavior: smooth;
+        }
+        body::-webkit-scrollbar{
+            width: 0.8vw;
+            background-color: rgb(190, 190, 190);
+            border-radius: 1233px;
+        }
+        body::-webkit-scrollbar-thumb{
+            width: 0.8vw;
+            background-color:rgb(0, 174, 255) ;
+            border: outset 0.2vw rgb(0, 174, 255);
+            border-radius: 1233px;
+        }
+    </style>
+    
+
+</body>
+</html>
