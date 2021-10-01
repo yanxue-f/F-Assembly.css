@@ -24,4 +24,16 @@
 >>>>>+	lg 屏幕 ≥ 992px
 >>>>>+	xl 屏幕 ≥ 1200px
 >>>>>+	xxl 屏幕 ≥ 1600px
->>>(详细内容请查看演示[24 layout] <https://fan-aoqiang.gitee.io/f-assembly.css>)
+>>>(详细内容请查看演示 [24 layout] <https://fan-aoqiang.gitee.io/f-assembly.css/24layout/>)
+
+>>>2. Split line
+
+>>>>+ divider类：创建分割线的生成环境。
+>>>>+ divider-row类：配合divider类实现水平分割线，可加文字。
+>>>>+ divider-column类：配合divider类实现垂直分割线，可加入文字。
+>>>>+ text-position-()类：设置分割线上的文本位置，默认在文本开头位置，text-position-center：在文本居中位置，text-position-end：在文本末尾位置。
+>>>>+ linear-()类：改变分割线的线性，默认为实线，linear-dotted：点状线。linear-dashed：虚线。
+>>>>+ divider-inline类：配合divider类实现行内分割线。
+>>>>+ divider-night类：配合divider类实现夜间模式下的分割线。
+>>>>+ 改变分割线的样式：通过改变divider类divider-row类和divider-colum类显得gap，font-size，font，border-bottom，border-right属性来改变分割线的样式。
+>>>(详细内容请查看演示 [Splitline] <https://fan-aoqiang.gitee.io/f-assembly.css/Splitline/>)
