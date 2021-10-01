@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.divider{
+    display: flex;
+}
+/*横向分割线*/
+.divider-row{
+    padding: 0 5%;
+    align-items: center;
+    margin: clamp(10px , 2em ,100px) 0;
+}
+.divider.divider-row::before{
+    content: "";
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0,.3);
+    flex: 0 0 7%;
+}
+.divider.divider-row::after{
+    content: "";
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0,.3);
+    flex: 1 0 auto;
+}
+.divider-row.linear-dotter::before , .divider-row.linear-dotter::after {
+    border-bottom-style: dotted;
+}
+.divider-row.linear-dashed::before , .divider-row.linear-dashed::after{
+    border-bottom-style: dashed;
+}
+.divider-row.divider-night::before , .divider-row.divider-night::after{
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+/*纵向分割线*/
+.divider-column{
+    flex-direction: column;
+    padding: 0.4em 0;
+    align-items: center;
+    width: min-content;
+    margin: 0 clamp(10px , 2em ,100px);
+}
+.divider.divider-column::before{
+    content: "";
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0,.3);
+    flex: 0 0 7%;
+}
+.divider.divider-column::after{
+    content: "";
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0,.3);
+    flex: 1 0 auto;
+}
+.divider-column.linear-dotter::before , .divider-column.linear-dotter::after{
+    border-right-style: dotted;
+}
+.divider-column.linear-dashed::before , .divider-column.linear-dashed::after{
+    border-right-style: dashed;
+}
+.divider-column.divider-night::before , .divider-column.divider-night::after{
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+/*行内分割线*/
+.divider-inline{
+    display: inline-block;
+    height: 1em;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0,.3);
+    width: min-content;
+    margin: 0 clamp(10px , 0.5em ,100px);
+    position: relative;
+    top: 0.15em;
+}
+.divider-inline.linear-dotter{
+    border-right-style: dotted;
+}
+.divider-inline.linear-dashed{
+    border-right-style: dashed;
+}
+.divider-inline.linear-double{
+    border-right-style: double;
+}
+.divider-inline.linear-groove{
+    border-right-style: groove;
+}
+.divider-inline.linear-ridge{
+    border-right-style: ridge;
+}
+.divider-inline.divider-night::before , .divider-inline.divider-night::after{
+    border-color: rgba(255, 255, 255, 0.7);
+}
+.divider.text-position-center::before{
+    flex: 1 0 auto;
+}
+.divider.text-position-center::after{
+    flex: 1 0 auto;
+}
+.divider.text-position-end::before{
+    flex: 1 0 auto;
+}
+.divider.text-position-end::after{
+    flex: 0 0 7%;
+}
