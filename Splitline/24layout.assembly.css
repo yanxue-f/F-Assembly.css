@@ -1241,7 +1241,7 @@ body .row > .col-xs-narrow{
         flex: none;
         width:max-content;
     }
-    body .row > .col-sm-narrow{
+    body  .row > .col-sm-narrow{
         width: max-content;
     }
 /*屏幕≥ 576px时的对其方式应用于flex*/

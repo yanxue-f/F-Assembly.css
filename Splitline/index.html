@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../24layout.assembly.css ">
+    <link rel="stylesheet" href="./splitline-assembly.css">
+    <title>split line</title>
+</head>
+<body>
+        <div class="row gutter-4">
+            <div class="col-12" id="Horizontal split line">
+                <div class="container">
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-row "></div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-row  linear-dotter"></div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-row  linear-dashed"></div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                </div>
+                <div class="container-content">
+                    <h3>水平分割线</h3>
+                    <p>通过divider实现分割线环境，通过divider-row实现水平分割线布局。中间可插入文字。又可以通过linear-（线型）改变分割线的样式，默认为实线。（虚线：linear-dashed，点状线：linear-dotter）</p>
+                    <pre>
+                        <code>
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-row "&gt&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-row  linear-dotter"&gt&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-row  linear-dashed"&gt&lt/div&gt
+                        </code>
+                    </pre>
+                
+                </div>
+            </div>
+            <div class="col-12" id="Horizontal split line+text">
+                <div class="container" >
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-row ">Text</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-row text-position-center linear-dotter">Left text</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-row text-position-end linear-dashed">Right text</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                </div>
+                <div class="container-content">
+                    <h3>加文字水平分割线</h3>
+                    <p>分割线加文字，通过text-position-（位置）改变文字的位置。默认为文本的开头对其（text-position-center：文本居中，text-position-end：文本末尾对齐）</p>
+                    <pre>
+                        <code>
+    &ltdiv class="content"&gtText&lt/div&gt
+    &ltdiv class="divider divider-row "&gt&lt/div&gt
+    &ltdiv class="content"&gtLeft text&lt/div&gt
+    &ltdiv class="divider divider-row linear-dotter text-position-center"&gt&lt/div&gt
+    &ltdiv class="content"&gtRight text&lt/div&gt
+    &ltdiv class="divider divider-row linear-dashed"&gt&lt/div&gt
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="col-24" id="vertical Split line">
+                <div class="container" >
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-column "></div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-column ">Text</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-column text-position-center linear-dotter">Left text</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-column text-position-end linear-dashed">Right text</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                </div>
+                <div class="container-content">
+                    <h3>垂直分割线</h3>
+                    <p>通过divider实现分割线环境，通过divider-column实现水平分割线布局。中间可插入文字。又可以通过linear-（线型）改变分割线的样式，默认为实线。（虚线：linear-dashed，点状线：linear-dotter）通过text-position-（位置）改变文字的位置。默认为文本的开头对其（text-position-center：文本居中，text-position-end：文本末尾对齐）</p>
+                    <pre>
+                        <code>
+    &ltdiv class="content"&gt&lt/div&gt
+    &ltdiv class="divider divider-column "&gt&lt/div&gt
+    &ltdiv class="content"&gtText&lt/div&gt
+    &ltdiv class="divider divider-column "&gt&lt/div&gt
+    &ltdiv class="content"&gtLeft text&lt/div&gt
+    &ltdiv class="divider divider-column linear-dotter text-position-center"&gt&lt/div&gt
+    &ltdiv class="content"&gtRight text&lt/div&gt
+    &ltdiv class="divider divider-column linear-dashed"&gt&lt/div&gt
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="col-12" id="inline Split line">
+                <div class="col-12">
+                    <div class="container" >
+                        <span>One</span>
+                        <div class="divider divider-inline "></div>
+                        <span>Two</span>
+                        <div class="divider divider-inline "></div>
+                        <span>three</span>
+                        
+                    </div>
+                    <div class="container-content">
+                        <h3>行内分割线</h3>
+                        <p>通过divider实现分割线环境，通过divider-column实现水平分割线布局。中间可插入文字。又可以通过linear-（线型）改变分割线的样式，默认为实线。（虚线：linear-dashed，点状线：linear-dotter）</p>
+                        <pre>
+                            <code>
+&ttspan&gtOne&tt/span&gt
+&ttdiv class="divider divider-inline "&gt&tt/div&gt
+&ttspan&gtTwo&tt/span&gt
+&ttdiv class="divider divider-inline "&gt&tt/div&gt
+&ttspan&gtthree&tt/span&gt      
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" id="right Split line">
+                 <div class="container right" >
+                    <div class="content">Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                    <div class="divider divider-row divider-night"></div>
+                    <div class="content"> Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                </div>
+                <div class="container-content ">
+                    <h3>夜间模式分割线</h3>
+                    <p>通过加入divider-night使分割线处于夜间状态。即改变分割线颜色。</p>
+                    <pre>
+                        <code>
+&ttspan&gtOne&tt/span&gt
+&ttdiv class="divider divider-row divider-night "&gt&tt/div&gt
+&ttspan&gtTwo&tt/span&gt   
+                            </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="col" id="more split line">
+                <div class="container">
+                   <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                   <div class="divider divider-row ">Text</div>
+                   <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                   <div class="divider divider-row ">Text</div>
+                   <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                   <div class="divider divider-row ">Text</div>
+                   <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
+                   
+               </div>
+               <div class="container-content">
+                   <h3>多格式分割线</h3>
+                   <p>通过改变divider类元素的font的值来改变分割线上字体的样式，改变字体大小改变分割线距离前后元素的距离（10px ，2em ，100px）。改变border-color的值改变分割线颜色。也可在divider-column和divider-row类元素下加入gap属性并改变其大小，来改变分割线距离其上文字的距离。也可在divider-column和divider-row类元素下加入border-right-style和border-bottom-style属性并改变其大小，来改变分割线线型。</p>
+                   <pre>
+                       <code>
+&ltdiv class="content"&gt...&lt/div&gt
+&ltdiv class="divider divider-row "&gt&lt/div&gt
+&ltdiv class="content"&gt...&lt/div&gt
+&ltdiv class="divider divider-row "&gt&lt/div&gt
+&ltdiv class="content"&gt...&lt/div&gt 
+&ltdiv class="divider divider-row "&gt&lt/div&gt
+&ltdiv class="content"&gt...&lt/div&gt 
+&ltstyle&gt
+    .divider:nth-of-type(2){
+        font-size: 30px;
+        color: red;
+        font-weight: 600;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .divider-row:nth-of-type(3){
+        gap:20px;
+    }
+&lt/style&gt
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div id="end" ></div>
+        </div>
+        <nav class="nav">
+            <li>
+                <a href="#end">到达页面底部</a>
+            </li>
+            <li>
+                <a href="#Horizontal split line">水平分割线</a>
+            </li>
+            <li>
+                <a href="#Horizontal split line+text">加文字水平分割线</a>
+            </li>
+            <li>
+                <a href="#vertical Split line">垂直分割线</a>
+            </li>
+            <li>
+                <a href="#inline Split line">行内分割线</a>
+            </li>
+            <li>
+                <a href="#right Split line">夜间模式分割线</a>
+            </li>
+            <li>
+                <a href="#more split line">多格式分割线</a>
+            </li>
+            <li>
+                <a href="#">回到顶部</a>
+            </li>
+
+        </nav>
+    
+    <style>
+        .row{
+            width: 80%;
+            margin: 10px 0;
+            margin-left: 19%;
+            
+        }
+        .col-24{
+            border: solid rgb(202, 202, 202) 1px;
+            border-radius: 20px;
+            padding: 2%;
+        }
+        .right{
+            background-color: rgba(0, 0, 0, 0.658);
+            color: white;
+        }
+        .col{
+            border: solid rgb(202, 202, 202) 1px;
+            border-radius: 20px;
+            padding: 2%;
+        }
+        .col>.container>.divider:nth-child(4){
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: red;
+            font-weight: 600;
+        }
+        .col>.container>.divider-row:nth-child(6){
+            gap:20px;
+        }
+        .col-12{
+            border: solid rgb(202, 202, 202) 1px;
+            border-radius: 20px;
+            padding: 2%;
+        }
+        .container{
+            border: solid rgba(202, 202, 202,0.5) 1px;
+            border-radius: 20px;
+            padding: 5%;
+        }
+        .container-content{
+            border: solid rgba(202, 202, 202,0.5) 1px;
+            border-radius: 20px;
+            padding: 5%;
+        }
+        .col-24 .container{
+            display: flex;
+        }
+        pre{
+            border-top: 1px silver solid;
+            overflow: auto;
+        }
+        .col-24 .content{
+            width: 100px;
+        }
+        code{
+            width: 100%;
+            display: block;
+            flex: none;
+            color:rgb(0, 17, 255);
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            filter: brightness(120%);
+        }
+        nav{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            width: 17%;
+            left: 1%;
+            top: 10px;
+            border: 3px outset rgb(69, 184, 250);
+            border-radius: 8px;
+            background-color: white;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-right: 0.5vh;
+        }
+        li{
+            border-radius: 8px;
+            padding: 0px 3px;
+            text-align: center;
+            height: 7vh;
+            margin-bottom: 1vh;
+            border: 3px outset rgb(82, 81, 81);
+            background-color: rgb(165, 165, 165);
+        }
+        
+        li:hover>a{
+            color: rgb(27, 27, 37);
+        }
+        li:hover{
+            border: 3px outset rgb(99, 99, 99);
+            background-color: rgb(230, 230, 230);
+        }
+        li:active{
+            border: 3px inset rgb(56, 56, 56);
+            background-color: rgb(165, 165, 165);
+        }
+        li:active>a{
+            color: white;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height:calc(7vh - 8px);
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+        
+    
+</body>
+</html>
