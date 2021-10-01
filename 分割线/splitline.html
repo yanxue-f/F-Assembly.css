@@ -39,9 +39,9 @@
             <div class="col-12" id="Horizontal split line+text">
                 <div class="container" >
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
-                    <div class="divider divider-row ">Text</div>
+                    <div class="divider divider-row ">Left text</div>
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
-                    <div class="divider divider-row text-position-center linear-dotter">Left text</div>
+                    <div class="divider divider-row text-position-center linear-dotter"> Text</div>
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
                     <div class="divider divider-row text-position-end linear-dashed">Right text</div>
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
@@ -51,12 +51,12 @@
                     <p>分割线加文字，通过text-position-（位置）改变文字的位置。默认为文本的开头对其（text-position-center：文本居中，text-position-end：文本末尾对齐）</p>
                     <pre>
                         <code>
-    &ltdiv class="content"&gtText&lt/div&gt
-    &ltdiv class="divider divider-row "&gt&lt/div&gt
-    &ltdiv class="content"&gtLeft text&lt/div&gt
-    &ltdiv class="divider divider-row linear-dotter text-position-center"&gt&lt/div&gt
-    &ltdiv class="content"&gtRight text&lt/div&gt
-    &ltdiv class="divider divider-row linear-dashed"&gt&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-row "&gtLeft text&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-row linear-dotter text-position-center"&gtText&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-row linear-dashed text-position-end"&gtRight text&lt/div&gt
                         </code>
                     </pre>
                 </div>
@@ -66,9 +66,9 @@
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
                     <div class="divider divider-column "></div>
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
-                    <div class="divider divider-column ">Text</div>
+                    <div class="divider divider-column ">Left text</div>
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
-                    <div class="divider divider-column text-position-center linear-dotter">Left text</div>
+                    <div class="divider divider-column text-position-center linear-dotter">Text</div>
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
                     <div class="divider divider-column text-position-end linear-dashed">Right text</div>
                     <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
@@ -78,14 +78,14 @@
                     <p>通过divider实现分割线环境，通过divider-column实现水平分割线布局。中间可插入文字。又可以通过linear-（线型）改变分割线的样式，默认为实线。（虚线：linear-dashed，点状线：linear-dotter）通过text-position-（位置）改变文字的位置。默认为文本的开头对其（text-position-center：文本居中，text-position-end：文本末尾对齐）</p>
                     <pre>
                         <code>
-    &ltdiv class="content"&gt&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
     &ltdiv class="divider divider-column "&gt&lt/div&gt
-    &ltdiv class="content"&gtText&lt/div&gt
-    &ltdiv class="divider divider-column "&gt&lt/div&gt
-    &ltdiv class="content"&gtLeft text&lt/div&gt
-    &ltdiv class="divider divider-column linear-dotter text-position-center"&gt&lt/div&gt
-    &ltdiv class="content"&gtRight text&lt/div&gt
-    &ltdiv class="divider divider-column linear-dashed"&gt&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-column "&gtLeft text&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-column linear-dotter text-position-center"&gtText&lt/div&gt
+    &ltdiv class="content"&gt...&lt/div&gt
+    &ltdiv class="divider divider-column linear-dashed"&gtRight text&lt/div&gt
                         </code>
                     </pre>
                 </div>
@@ -105,11 +105,11 @@
                         <p>通过divider实现分割线环境，通过divider-column实现水平分割线布局。中间可插入文字。又可以通过linear-（线型）改变分割线的样式，默认为实线。（虚线：linear-dashed，点状线：linear-dotter）</p>
                         <pre>
                             <code>
-&ttspan&gtOne&tt/span&gt
-&ttdiv class="divider divider-inline "&gt&tt/div&gt
-&ttspan&gtTwo&tt/span&gt
-&ttdiv class="divider divider-inline "&gt&tt/div&gt
-&ttspan&gtthree&tt/span&gt      
+&ltspan&gtOne&lt/span&gt
+&ltdiv class="divider divider-inline "&gt&lt/div&gt
+&ltspan&gtTwo&lt/span&gt
+&ltdiv class="divider divider-inline "&gt&lt/div&gt
+&ltspan&gtthree&lt/span&gt      
                             </code>
                         </pre>
                     </div>
@@ -126,9 +126,9 @@
                     <p>通过加入divider-night使分割线处于夜间状态。即改变分割线颜色。</p>
                     <pre>
                         <code>
-&ttspan&gtOne&tt/span&gt
-&ttdiv class="divider divider-row divider-night "&gt&tt/div&gt
-&ttspan&gtTwo&tt/span&gt   
+&ltspan&gt...&lt/span&gt
+&ltdiv class="divider divider-row divider-night "&gt&lt/div&gt
+&ltspan&gt...&lt/span&gt   
                             </code>
                     </pre>
                 </div>
@@ -136,11 +136,11 @@
             <div class="col" id="more split line">
                 <div class="container">
                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
-                   <div class="divider divider-row ">Text</div>
+                   <div class="divider divider-row ">Left text</div>
                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
-                   <div class="divider divider-row ">Text</div>
+                   <div class="divider divider-row ">Left text</div>
                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
-                   <div class="divider divider-row ">Text</div>
+                   <div class="divider divider-row ">Left text</div>
                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</div>
                    
                </div>
@@ -150,11 +150,11 @@
                    <pre>
                        <code>
 &ltdiv class="content"&gt...&lt/div&gt
-&ltdiv class="divider divider-row "&gt&lt/div&gt
+&ltdiv class="divider divider-row "&gtLeft text&lt/div&gt
 &ltdiv class="content"&gt...&lt/div&gt
-&ltdiv class="divider divider-row "&gt&lt/div&gt
+&ltdiv class="divider divider-row "&gtLeft text&lt/div&gt
 &ltdiv class="content"&gt...&lt/div&gt 
-&ltdiv class="divider divider-row "&gt&lt/div&gt
+&ltdiv class="divider divider-row "&gtLeft text&lt/div&gt
 &ltdiv class="content"&gt...&lt/div&gt 
 &ltstyle&gt
     .divider:nth-of-type(2){
