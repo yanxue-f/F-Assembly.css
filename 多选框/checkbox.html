@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./checkbox-assembly.css">
     <link rel="stylesheet" href="./24layout.assembly.css">
-    <title>Document</title>
+    <title>checkbox</title>
 </head>
 <body>
     <nav class="nav">
@@ -38,68 +38,78 @@
     <div class="row gutter-8">
         <div class="col-24" id="checkbox-basic">
             <div class="container">
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="checkbox"  hidden >
-                    <label for="checkbox" class="checkbox-frame">checkbox</label>
-                </div>
+                <label  class="checkbox">
+                    <input type="checkbox" value="">
+                    <div class="checkbox-frame"></div>
+                    checkbox
+                </label>
             </div>
             <div class="container-content">
                 <div class="content">
                     <h3>基本多选框</h3>
-                <p>最基本的用法。</p>
+                    <p>最基本的用法。</p>
                 </div>
                 <pre>
                     <code>
-&ltdiv class="checkbox"&gt
-    &ltinput type="checkbox" value="" id="checkbox"  hidden &gt
-    &ltlabel for="checkbox" class="checkbox-frame"&gtcheckbox&lt/label&gt
-&lt/div&gt
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value=""    >
+    &ltdiv class="checkbox-frame">&lt/div>
+    checkbox
+&lt/label>
                     </code>
                 </pre>
             </div>
         </div>
         <div class="col-24" id="checkbox-group">
-            <div class="container">
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="compose-a" name="compose" hidden >
-                    <label for="compose-a" class="checkbox-frame">A</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="compose-b" name="compose" hidden >
-                    <label for="compose-b" class="checkbox-frame">B</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="compose-c" name="compose" hidden >
-                    <label for="compose-c" class="checkbox-frame">C</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="compose-d" name="compose" hidden >
-                    <label for="compose-d" class="checkbox-frame">D</label>
-                </div>
+            <div class="container">  
+                <label  class="checkbox">
+                    <input type="checkbox" value=""  name="compose">
+                    <div class="checkbox-frame"></div>
+                    A
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value=""  name="compose" >
+                    <div class="checkbox-frame"></div>
+                    B
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox" value=""  name="compose" >
+                    <div class="checkbox-frame"></div>
+                    C
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value=""  name="compose" >
+                    <div class="checkbox-frame"></div>
+                    D
+                </label>
             </div>
             <div class="container-content">
                 <div class="content">
                     <h3>多选框组合</h3>
-                <p>用相同的name将checkbox组合起来。采用相同的name。</p>
+                <p>用相同的name将checkbox组合起来。采用相同的name互斥</p>
                 </div>
                 <pre>
                     <code>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="compose-a" name="compose" hidden >
-    &ltlabel for="compose-a" class="checkbox-frame">A&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="compose-b" name="compose" hidden >
-    &ltlabel for="compose-b" class="checkbox-frame">B&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="compose-c" name="compose" hidden >
-    &ltlabel for="compose-c" class="checkbox-frame">C&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="compose-d" name="compose" hidden >
-    &ltlabel for="compose-d" class="checkbox-frame">D&lt/label>
-&lt/div>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value=""  name="compose">
+    &ltdiv class="checkbox-frame">&lt/div>
+    A
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value=""  name="compose">
+    &ltdiv class="checkbox-frame">&lt/div>
+    B
+&lt/label> 
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value=""  name="compose">
+    &ltdiv class="checkbox-frame">&lt/div>
+    C
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value=""  name="compose">
+    &ltdiv class="checkbox-frame">&lt/div>
+    D
+&lt/label>
 &ltstyle>
     .checkbox:not(:last-child){
         margin-right: 10px;
@@ -110,35 +120,38 @@
             </div>
         </div>
         <div class="col-24" id="checkbox-size">
-            <div class="container">
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="small-a" name="small" hidden >
-                    <label for="small-a" class="checkbox-content checkbox-small">apple</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="small-b" name="small" hidden >
-                    <label for="small-b" class="checkbox-content checkbox-small">banana</label>
-                </div>
+            <div class="container"> 
+                <label  class="checkbox">
+                    <input type="checkbox" value="" name="small">
+                    <div class="checkbox-content checkbox-small">apple</div>
+                    
+                </label>
+                <label  class="checkbox">
+                    <input type="checkbox" value="" name="small">
+                    <div class="checkbox-content checkbox-small">banana</div>
+                    
+                </label>
+                <br>
+                <br> 
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="medium">
+                    <div class="checkbox-content">apple</div>
+                    
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="medium">
+                    <div class="checkbox-content">banana</div>
+                </label>
                 <br>
                 <br>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="medium-a" name="medium" hidden >
-                    <label for="medium-a" class="checkbox-content ">apple</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="medium-b" name="medium" hidden >
-                    <label for="medium-b" class="checkbox-content ">banana</label>
-                </div>
-                <br>
-                <br>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="large-a" name="large" hidden >
-                    <label for="large-a" class="checkbox-content checkbox-large">apple</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="large-b" name="large" hidden >
-                    <label for="large-b" class="checkbox-content checkbox-large">banana</label>
-                </div>
+                <label class="checkbox">
+                    <input type="checkbox" value=""  name="large">
+                    <div class="checkbox-content checkbox-large">apple</div>
+                </label>
+                <label  class="checkbox">
+                    <input type="checkbox" value=""  name="large">
+                    <div class="checkbox-content checkbox-large">banana</div>
+                </label>
             </div>
             <div class="container-content">
                 <div class="content">
@@ -147,33 +160,34 @@
                 </div>
                 <pre>
                     <code>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="small-a" name="small" hidden >
-    &ltlabel for="small-a" class="checkbox-content checkbox-small">apple&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="small-b" name="small" hidden >
-    &ltlabel for="small-b" class="checkbox-content checkbox-small">banana&lt/label>
-&lt/div>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value="" name="small">
+    &ltdiv class="checkbox-content checkbox-small">apple&lt/div>    
+&lt/label>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value="" name="small">
+    &ltdiv class="checkbox-content checkbox-small">banana&lt/div>   
+&lt/label>
+&ltbr>
+&ltbr> 
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="medium">
+    &ltdiv class="checkbox-content">apple&lt/div>    
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="medium">
+    &ltdiv class="checkbox-content">banana&lt/div>
+&lt/label>
 &ltbr>
 &ltbr>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="medium-a" name="medium" hidden >
-    &ltlabel for="medium-a" class="checkbox-content ">apple&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="medium-b" name="medium" hidden >
-    &ltlabel for="medium-b" class="checkbox-content ">banana&lt/label>
-&lt/div>
-&ltbr>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="large-a" name="large" hidden >
-    &ltlabel for="small-a" class="checkbox-content checkbox-large">apple&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="small-b" name="large" hidden >
-    &ltlabel for="large-b" class="checkbox-content checkbox-large">banana&lt/label>
-&lt/div>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value=""  name="large">
+    &ltdiv class="checkbox-content checkbox-large">apple&lt/div>
+&lt/label>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value=""  name="large">
+    &ltdiv class="checkbox-content checkbox-large">banana&lt/div>
+&lt/label>
 &ltstyle>
     .checkbox:not(:last-child){
         margin-right: 10px;
@@ -184,44 +198,49 @@
             </div>
         </div>
         <div class="col-24" id="checkbox-custom">
-            <div class="container">
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="Checkbox-default"  hidden >
-                    <label for="Checkbox-default" class="checkbox-frame">checkbox-default</label>
-                </div>
+            <div class="container">   
+                <label  class="checkbox">
+                    <input type="checkbox" value="">
+                    <div class="checkbox-frame"></div>
+                    checkbox-default
+                </label>
                 <div class="size">
-                    <div class="checkbox">
-                        <input type="checkbox" value="" id="Checkbox-size"  hidden >
-                        <label for="Checkbox-size" class="checkbox-frame">checkbox-size</label>
-                    </div>
+                    <label  class="checkbox"> 
+                        <input type="checkbox" value="">
+                        <div class="checkbox-frame"></div>
+                        checkbox-size
+                    </label>    
                 </div>
                 <div class="color">
-                    <div class="checkbox">
-                        <input type="checkbox" value="" id="Checkbox-color"  hidden >
-                        <label for="Checkbox-color" class="checkbox-frame">checkbox-color</label>
-                    </div>
+                    <label  class="checkbox"> 
+                        <input type="checkbox" value="">
+                        <div class="checkbox-frame"></div>
+                        checkbox-color
+                    </label> 
                 </div>
-                
             </div>
             <div class="container-content">
                 <div class="content">
                     <h3>自定义多选框</h3>
-                    <p>通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变多选框的样式。</p>
+                    <p>通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变多选框的样式。通过改变checkbox或checkbox-block下gap属性改变文字距方点距离。</p>
                 </div>
                 <pre>
                     <code>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="checkbox-default"  hidden >
-    &ltlabel for="checkbox-default" class="checkbox-frame">checkbox-default&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="checkbox-size"  hidden >
-    &ltlabel for="checkbox-size" class="checkbox-frame">checkbox-size&lt/label>
- &lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="checkbox-color"  hidden >
-    &ltlabel for="checkbox-color" class="checkbox-frame">checkbox-color&lt/label>
-&lt/div>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value="">
+    &ltdiv class="checkbox-frame">&lt/div>
+    checkbox-default
+&lt/label>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value="">
+    &ltdiv class="checkbox-frame">&lt/div>
+    checkbox-size
+&lt/label>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value="">
+    &ltdiv class="checkbox-frame">&lt/div>
+    checkbox-color
+&lt/label>
 &ltstyle>
     .checkbox:nth-child(2){
         --checkbox:30px;
@@ -239,17 +258,17 @@
     </div>
     <div class="row gutter-8">
         <div class="col-24" id="checkbox-disabled">
-            <div class="container">
-                <div class="checkbox">
-                    <div class="checkbox">
-                        <input type="checkbox" value="" id="disabled-1" hidden disabled>
-                        <label for="disabled-1" class="checkbox-frame">Disabled</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" value="" id="disabled-2" hidden disabled checked>
-                        <label for="disabled-2" class="checkbox-frame">Disabled+checked</label>
-                    </div>
-                </div>
+            <div class="container">                   
+                <label  class="checkbox">
+                    <input type="checkbox" value="" disabled>
+                    <div class="checkbox-frame"></div>
+                    <span>Disabled</span>
+                </label>
+                <label  class="checkbox">
+                    <input type="checkbox" value="" disabled checked>
+                    <div class="checkbox-frame"></div>
+                    <span>Disabled+Checked</span>
+                </label>
             </div>
             <div class="container-content">
                 <div class="content">
@@ -258,14 +277,16 @@
                 </div>
                 <pre>
                     <code>
-&ltdiv class="checkbox"&gt
-    &ltinput type="checkbox" value="" id="disabled-1" hidden disabled&gt
-    &ltlabel for="disabled-1" class="checkbox-frame"&gtDisabled&lt/label&gt
-&lt/div&gt
-&ltdiv class="checkbox"&gt
-    &ltinput type="checkbox" value="" id="disabled-2" hidden disabled checked&gt
-    &ltlabel for="disabled-2" class="checkbox-frame"&gtDisabled+checked&lt/label&gt
-    &lt/div&gt
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value="" disabled>
+    &ltdiv class="checkbox-frame">&lt/div>
+    &ltspan>Disabled&lt/span>
+&lt/label>
+&ltlabel  class="checkbox">
+    &ltinput type="checkbox" value="" disabled checked>
+    &ltdiv class="checkbox-frame">&lt/div>
+    &ltspan>Disabled+Checked&lt/span>
+&lt/label>
 &ltstyle>
     .checkbox:not(:last-child){
         margin-right: 10px;
@@ -277,22 +298,26 @@
         </div>
         <div class="col-24" id="checkbox-normal">
             <div class="container">
-                <div class="checkbox-block">
-                    <input type="checkbox" value="" id="Option-1" name="Option" hidden >
-                    <label for="Option-1" class="checkbox-frame">Option-1</label>
-                </div>
-                <div class="checkbox-block">
-                    <input type="checkbox" value="" id="Option-2" name="Option" hidden >
-                    <label for="Option-2" class="checkbox-frame">Option-2</label>
-                </div>
-                <div class="checkbox-block">
-                    <input type="checkbox" value="" id="Option-3" name="Option" hidden >
-                    <label for="Option-3" class="checkbox-frame">Option-3</label>
-                </div>
-                <div class="checkbox-block">
-                    <input type="checkbox" value="" id="Option-4" name="Option" hidden >
-                    <label for="Option-4" class="checkbox-frame">Option-4</label>
-                </div>
+                <label class="checkbox-block">
+                    <input type="checkbox" value="" name="Option">
+                    <div class="checkbox-frame"></div>
+                    Option-1
+                </label>
+                <label class="checkbox-block">
+                    <input type="checkbox" value="" name="Option">
+                    <div class="checkbox-frame"></div>
+                    Option-2
+                </label>
+                <label class="checkbox-block">
+                    <input type="checkbox" value="" name="Option">
+                    <div class="checkbox-frame"></div>
+                    Option-3
+                </label>
+                <label class="checkbox-block">
+                    <input type="checkbox" value="" name="Option">
+                    <div class="checkbox-frame"></div>
+                    Option-4
+                </label>
             </div>
             <div class="container-content">
                 <div class="content">
@@ -301,22 +326,26 @@
                 </div>
                 <pre>
                     <code>
-&ltdiv class="checkbox-block">
-    &ltinput type="checkbox" value="" id="Option-1" name="Option" hidden >
-    &ltlabel for="Option-1" class="checkbox-frame">Option-1&lt/label>
-&lt/div>
-&ltdiv class="checkbox-block">
-    &ltinput type="checkbox" value="" id="Option-2" name="Option" hidden >
-    &ltlabel for="Option-2" class="checkbox-frame">Option-2&lt/label>
-&lt/div>
-&ltdiv class="checkbox-block">
-    &ltinput type="checkbox" value="" id="Option-3" name="Option" hidden >
-    &ltlabel for="Option-3" class="checkbox-frame">Option-3&lt/label>
-&lt/div>
-&ltdiv class="checkbox-block">
-    &ltinput type="checkbox" value="" id="Option-4" name="Option" hidden >
-    &ltlabel for="Option-4" class="checkbox-frame">Option-4&lt/label>
-&lt/div>
+&ltlabel class="checkbox-block">
+    &ltinput type="checkbox" value="" name="Option">
+    &ltdiv class="checkbox-frame">&lt/div>
+    Option-1
+&lt/label>
+&ltlabel class="checkbox-block">
+    &ltinput type="checkbox" value="" name="Option">
+    &ltdiv class="checkbox-frame">&lt/div>
+    Option-2
+&lt/label>
+&ltlabel class="checkbox-block">
+    &ltinput type="checkbox" value="" name="Option">
+    &ltdiv class="checkbox-frame">&lt/div>
+    Option-3
+&lt/label>
+&ltlabel class="checkbox-block">
+    &ltinput type="checkbox" value="" name="Option">
+    &ltdiv class="checkbox-frame">&lt/div>
+    Option-4
+&lt/label>
 &ltstyle>
     .checkbox-block:not(:last-child){
         margin-right: 10px;
@@ -328,60 +357,62 @@
         </div>
         <div class="col-24" id="checkbox-tectonic">
             <div class="container">
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-1-a" name="fruits-1" hidden >
-                    <label for="fruits-1-a" class="checkbox-frame">apple</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-1-b" name="fruits-1" hidden >
-                    <label for="fruits-1-b" class="checkbox-frame">banana</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-1-c" name="fruits-1" hidden disabled>
-                    <label for="fruits-1-c" class="checkbox-frame">orange</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-1-d" name="fruits-1" hidden disabled checked>
-                    <label for="fruits-1-d" class="checkbox-frame">pear</label>
-                </div>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-1">
+                    <div class="checkbox-frame"></div>
+                    apple
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-1">
+                    <div class="checkbox-frame"></div>
+                    banana
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-1"disabled>
+                    <div class="checkbox-frame"></div>
+                    <span>orange</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-1"disabled checked>
+                    <div class="checkbox-frame"></div>
+                    <span>pear</span>
+                </label>
                 <br>
                 <br>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-2-a" name="fruits-2" hidden >
-                    <label for="fruits-2-a" class="checkbox-content">apple</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-2-b" name="fruits-2" hidden >
-                    <label for="fruits-2-b" class="checkbox-content">banana</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-2-c" name="fruits-2" hidden disabled>
-                    <label for="fruits-2-c" class="checkbox-content">orange</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-2-d" name="fruits-2" hidden disabled checked>
-                    <label for="fruits-2-d" class="checkbox-content">pear</label>
-                </div>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-2">
+                    <div class="checkbox-content">apple</div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-2">
+                    <div class="checkbox-content">banana</div>    
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-2"disabled>
+                    <div class="checkbox-content">orange</div>   
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-2"disabled checked>
+                    <div class="checkbox-content">pear</div>   
+                </label>
                 <br>
                 <br>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-3-a" name="fruits-3" hidden >
-                    <label for="fruits-3-a" class="checkbox-content checkbox-fill">apple</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-3-b" name="fruits-3" hidden >
-                    <label for="fruits-3-b" class="checkbox-content checkbox-fill">banana</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-3-c" name="fruits-3" hidden disabled>
-                    <label for="fruits-3-c" class="checkbox-content checkbox-fill">orange</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="" id="fruits-3-d" name="fruits-3" hidden disabled checked>
-                    <label for="fruits-3-d" class="checkbox-content checkbox-fill">pear</label>
-                </div>
-                
-
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-3">
+                    <div class="checkbox-content checkbox-fill">apple</div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-3">
+                    <div class="checkbox-content checkbox-fill">banana</div>    
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-3"disabled>
+                    <div class="checkbox-content checkbox-fill">orange</div>   
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" value="" name="fruits-3"disabled checked>
+                    <div class="checkbox-content checkbox-fill">pear</div>   
+                </label>
             </div>
             <div class="container-content">
                 <div class="content">
@@ -390,56 +421,62 @@
                 </div>
                 <pre>
                     <code>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-1-a" name="fruits-1" hidden >
-    &ltlabel for="fruits-1-a" class="checkbox-frame">apple&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-1-b" name="fruits-1" hidden >
-    &ltlabel for="fruits-1-b" class="checkbox-frame">banana&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-1-c" name="fruits-1" hidden disabled>
-    &ltlabel for="fruits-1-c" class="checkbox-frame">orange&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-1-d" name="fruits-1" hidden disabled checked>
-    &ltlabel for="fruits-1-d" class="checkbox-frame">pear&lt/label>
-&lt/div>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-1">
+    &ltdiv class="checkbox-frame">&lt/div>
+    apple
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-1">
+    &ltdiv class="checkbox-frame">&lt/div>
+    banana
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-1"disabled>
+    &ltdiv class="checkbox-frame">&lt/div>
+    &ltspan>orange&lt/span>
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-1"disabled checked>
+    &ltdiv class="checkbox-frame">&lt/div>
+    &ltspan>pear&lt/span>
+&lt/label>
 &ltbr>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-2-a" name="fruits-2" hidden >
-    &ltlabel for="fruits-2-a" class="checkbox-content">apple&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-2-b" name="fruits-2" hidden >
-    &ltlabel for="fruits-2-b" class="checkbox-content">banana&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-2-c" name="fruits-2" hidden disabled>
-    &ltlabel for="fruits-2-c" class="checkbox-content">orange&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-2-d" name="fruits-2" hidden disabled checked>
-    &ltlabel for="fruits-2-d" class="checkbox-content">pear&lt/label>
-&lt/div>
 &ltbr>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-3-a" name="fruits-3" hidden >
-    &ltlabel for="fruits-3-a" class="checkbox-content checkbox-fill">apple&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-3-b" name="fruits-3" hidden >
-    &ltlabel for="fruits-3-b" class="checkbox-content checkbox-fill">banana&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-3-c" name="fruits-3" hidden disabled>
-    &ltlabel for="fruits-3-c" class="checkbox-content checkbox-fill">orange&lt/label>
-&lt/div>
-&ltdiv class="checkbox">
-    &ltinput type="checkbox" value="" id="fruits-3-d" name="fruits-3" hidden disabled checked>
-    &ltlabel for="fruits-3-d" class="checkbox-content checkbox-fill">pear&lt/label>
-&lt/div>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-2">
+    &ltdiv class="checkbox-content">apple&lt/div>
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-2">
+    &ltdiv class="checkbox-content">banana&lt/div>    
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-2"disabled>
+    &ltdiv class="checkbox-content">orange&lt/div>   
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-2"disabled checked>
+    &ltdiv class="checkbox-content">pear&lt/div>   
+&lt/label>
+&ltbr>
+&ltbr>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-3">
+    &ltdiv class="checkbox-content checkbox-fill">apple&lt/div>
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-3">
+    &ltdiv class="checkbox-content checkbox-fill">banana&lt/div>    
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-3"disabled>
+    &ltdiv class="checkbox-content checkbox-fill">orange&lt/div>   
+&lt/label>
+&ltlabel class="checkbox">
+    &ltinput type="checkbox" value="" name="fruits-3"disabled checked>
+    &ltdiv class="checkbox-content checkbox-fill">pear&lt/div>   
+&lt/label>
 &ltstyle>
     .checkbox:not(:last-child){
         margin-right: 10px;
@@ -499,7 +536,7 @@
         .checkbox-block:not(:last-child){
             margin-bottom: 10px;
         }
-        .size .checkbox{
+        .size > .checkbox{
             --checkbox:30px;
         }
         .color .checkbox:last-child{
@@ -557,7 +594,30 @@
             width: 100%;
             height: 100%;
         }
+        code{
+            width: 100%;
+            display: block;
+            flex: none;
+            color:rgb(0, 17, 255);
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            filter: brightness(120%);
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body::-webkit-scrollbar{
+            width: 0.8vw;
+            background-color: rgb(190, 190, 190);
+            border-radius: 1233px;
+        }
+        body::-webkit-scrollbar-thumb{
+            width: 0.8vw;
+            background-color:rgb(0, 174, 255) ;
+            border: solid 0.2vw rgb(0, 174, 255);
+            border-radius: 1233px;
+        }
     </style>
-    
 </body>
 </html>
