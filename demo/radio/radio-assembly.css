@@ -16,10 +16,14 @@
 
 
 .radio{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
 }
 .radio-block{
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 input{
     display: none;
@@ -57,38 +61,44 @@ input{
     margin:  calc(var(--radio) * 3 / 16 );
 }
 
-input:hover + .radio-circular::before{
+input:hover ~ .radio-circular::before{
     border-color: var(--radio-color) ;
 }
-input:checked + .radio-circular::before{
+input:checked ~ .radio-circular::before{
     border-color:var(--radio-color);
     box-shadow: 0 0 0 calc(var(--radio) * 3 / 16 ) var(--radio-shadow);
 }
-input:checked + .radio-circular::after{
+input:checked ~ .radio-circular::after{
     background-color: var(--radio-color);
     transform: scale(1);  
 }
 
-input:disabled+.radio-circular{
+input:disabled ~ .radio-circular{
     color:#d9d9d9 ;
 }
-input:disabled+.radio-circular::before {
-    border-color:#d9d9d9;
-}
-input:disabled:hover+.radio-circular::before {
-    border-color:#d9d9d9;
-}
-input:default:disabled+.radio-circular{
+input:disabled ~ span{
     color:#d9d9d9 ;
 }
-input:default:disabled:hover+.radio-circular::before{
+input:disabled ~ .radio-circular::before {
     border-color:#d9d9d9;
 }
-input:default:disabled+.radio-circular::before{
+input:disabled:hover ~ .radio-circular::before {
+    border-color:#d9d9d9;
+}
+input:default:disabled ~ .radio-circular{
+    color:#d9d9d9 ;
+}
+input:default:disabled ~ span{
+    color:#d9d9d9 ;
+}
+input:default:disabled:hover ~ .radio-circular::before{
+    border-color:#d9d9d9;
+}
+input:default:disabled ~ .radio-circular::before{
     border-color:#d9d9d9;
     box-shadow: none;
 }
-input:default:disabled+.radio-circular::after{
+input:default:disabled ~ .radio-circular::after{
     background-color:#d9d9d9 ;
     transform: scale(1); 
 }
@@ -107,11 +117,11 @@ input:default:disabled+.radio-circular::after{
 .radio-small.radio-content{
     padding:1px 10px;
 }
-input:checked +.radio-content.radio-fill{
+input:checked ~.radio-content.radio-fill{
     background-color:var(--radio-color);
     color: white;
 }
-input:checked + .radio-content{
+input:checked ~ .radio-content{
     border-color:var(--radio-color) ;
     color: var(--radio-color);
     box-shadow: 0 0 0 calc(3em / 16) var(--radio-shadow);
@@ -119,15 +129,15 @@ input:checked + .radio-content{
 .radio-content:hover{
     color: var(--radio-color);
 }
-input:disabled+.radio-content{
+input:disabled ~ .radio-content{
     border-color: #d9d9d9;
     background-color: #e0e0e077;
     color:#d9d9d9 ;
 }
-input:disabled+.radio-content:hover{
+input:disabled ~ .radio-content:hover{
     color:#d9d9d9 ;
 }
-input:default:disabled+.radio-content{
+input:default:disabled ~ .radio-content{
     color:#d9d9d9 ;
     background-color: #afafaf;
     box-shadow: none;
