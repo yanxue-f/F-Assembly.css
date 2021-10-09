@@ -51,11 +51,14 @@
 
 >>>4.checkbox
 
->>>>+ checkbox类：基本单选框用id于for将input和label组合。
+>>>>+ checkbox类：基本多选框用id于for将input和label组合。
 >>>>+ checkbox禁用状态：checkbox在disabled和checked，disabled下的状态。
 >>>>+ checkbox组合：用相同的name组合。
->>>>+ checkbox-block类:单选框垂直排布。
->>>>+ checkbox的大小：使用rcheckbox-content配合checkbox-large，checkbox-small实现不同大小的文字单选框。
->>>>+ checkbox的样式：使用checkbox-frame，checkbox-content和checkbox-fill实现不同的单选框。
->>>>+ 自定义单选框:通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变单选框的样式。通过改变checkbox或checkbox-block下的gap属性改变文字距离方片的距离。
+>>>>+ checkbox-block类:多选框垂直排布。
+>>>>+ checkbox的大小：使用rcheckbox-content配合checkbox-large，checkbox-small实现不同大小的文字多选框。
+>>>>+ checkbox的样式：使用checkbox-frame，checkbox-content和checkbox-fill实现不同的多选框。
+>>>>+ 自定义多选框:通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变多选框的样式。通过改变checkbox或checkbox-block下的gap属性改变文字距离方片的距离。
 >>>(详细内容请查看演示 [checkbox] <https://fan-aoqiang.gitee.io/f-assembly.css/checkbox/>)
+
+
+> 欢迎来到“临汾追梦软件编程”和老孟一起学习前端技术，打造IT精英。联系电话：13466966818.
