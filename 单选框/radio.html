@@ -80,7 +80,7 @@
             <div class="container-content">
                 <div class="content">
                     <h3>单选框组合</h3>
-                <p>用相同的name将radio组合起来。互斥</p>
+                <p>用相同的name将radio组合起来。采用相同的name互斥</p>
                 </div>
                 <pre>
                     <code>
@@ -254,7 +254,7 @@
             <div class="container-content">
                 <div class="content">
                     <h3>禁用状态</h3>
-                    <p>radio不可用</p>
+                    <p>radio不可用。</p>
                 </div>
                 <pre>
                     <code>
@@ -297,7 +297,7 @@
             <div class="container-content">
                 <div class="content">
                     <h3>垂直单选框</h3>
-                <p>使用radio-block使单选框垂直排列</p>
+                <p>使用radio-block使单选框垂直排列。</p>
                 </div>
                 <pre>
                     <code>
@@ -386,7 +386,7 @@
             <div class="container-content">
                 <div class="content">
                     <h3>单选框样式</h3>
-                <p>使用radio-circular，radio-content和radio-fill实现不同的单选框</p>
+                <p>使用radio-circular，radio-content和radio-fill实现不同的单选框。</p>
                 </div>
                 <pre>
                     <code>
@@ -438,7 +438,7 @@
 &lt/div>
 &ltdiv class="radio">
     &ltinput type="radio" value="" id="fruits-3-d" name="fruits-3" hidden disabled checked>
-    &ltlabel for="fruits-3-d" class="radio-content ">pear&lt/label>
+    &ltlabel for="fruits-3-d" class="radio-content radio-fill">pear&lt/label>
 &lt/div>
 &ltstyle>
     .radio:not(:last-child){
@@ -529,6 +529,8 @@
             margin-bottom: 1vh;
             border: 3px outset rgb(82, 81, 81);
             background-color: rgb(165, 165, 165);
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
         li:hover>a{

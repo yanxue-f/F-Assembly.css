@@ -37,3 +37,25 @@
 >>>>+ divider-night类：配合divider类实现夜间模式下的分割线。
 >>>>+ 改变分割线的样式：通过改变divider类divider-row类和divider-colum类显得gap，font-size，font，border-bottom，border-right属性来改变分割线的样式。
 >>>(详细内容请查看演示 [Splitline] <https://fan-aoqiang.gitee.io/f-assembly.css/Splitline/>)
+
+>>>3.radio
+
+>>>>+ radio类：基本单选框用id于for将input和label组合。
+>>>>+ radio禁用状态：radio在disabled和checked，disabled下的状态。
+>>>>+ radio组合：用相同的name组合。
+>>>>+ radio-block类:单选框垂直排布。
+>>>>+ radio的大小：使用radio-content配合radio-large，radio-small实现不同大小的文字单选框。
+>>>>+ radio的样式：使用radio-circular，radio-content和radio-fill实现不同的单选框。
+>>>>+ 自定义单选框:通过改变radio或radio-block下的变量：--radio ，--radio-color ，--radio-shadow的值来改变单选框的样式。
+>>>(详细内容请查看演示 [radio] <https://fan-aoqiang.gitee.io/f-assembly.css/radio/>)
+
+>>>4.checkbox
+
+>>>>+ checkbox类：基本单选框用id于for将input和label组合。
+>>>>+ checkbox禁用状态：checkbox在disabled和checked，disabled下的状态。
+>>>>+ checkbox组合：用相同的name组合。
+>>>>+ checkbox-block类:单选框垂直排布。
+>>>>+ checkbox的大小：使用rcheckbox-content配合checkbox-large，checkbox-small实现不同大小的文字单选框。
+>>>>+ checkbox的样式：使用checkbox-frame，checkbox-content和checkbox-fill实现不同的单选框。
+>>>>+ 自定义单选框:通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变单选框的样式。
+>>>(详细内容请查看演示 [checkbox] <https://fan-aoqiang.gitee.io/f-assembly.css/checkbox/>)
