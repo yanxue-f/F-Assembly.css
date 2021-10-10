@@ -57,7 +57,7 @@
 >>>>+ checkbox-block类:多选框垂直排布。
 >>>>+ checkbox的大小：使用rcheckbox-content配合checkbox-large，checkbox-small实现不同大小的文字多选框。
 >>>>+ checkbox的样式：使用checkbox-frame，checkbox-content和checkbox-fill实现不同的多选框。
->>>>+ 自定义多选框:通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变多选框的样式。通过改变checkbox或checkbox-block下的gap属性改变文字距离方片的距离。
+>>>>+ 自定义多选框:通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变多选框的样式。通过改变checkbox或checkbox-block下的--checkbox改变文字距离方片的距离。
 >>>(详细内容请查看演示 [checkbox] <https://fan-aoqiang.gitee.io/f-assembly.css/checkbox/>)
 
 

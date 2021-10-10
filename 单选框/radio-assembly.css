@@ -18,21 +18,22 @@
 .radio{
     display: inline-flex;
     align-items: center;
-    gap: 3px;
 }
 .radio-block{
     display: flex;
     align-items: center;
-    gap: 3px;
 }
 input{
     display: none;
+    order: -2;
 }
+
 .radio-circular{
     display: inline-flex;
     align-items: center;
     position: relative;
-    gap: calc(var(--radio) * 0.5);
+    gap: calc(var(--radio) * 0.3);
+    order: -1;
 }
 .radio-circular::before{
     content: "";
@@ -43,7 +44,7 @@ input{
     border-radius: 99999px;
     position: relative;
     order: -1;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     margin: calc(var(--radio) * 3 / 16 );
 }
 .radio-circular::after{
@@ -57,7 +58,7 @@ input{
     left:calc(var(--radio) * 0.2);
     background-color: transparent;
     transform: scale(0.1);
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     margin:  calc(var(--radio) * 3 / 16 );
 }
 
@@ -109,7 +110,8 @@ input:default:disabled ~ .radio-circular::after{
     line-height: 1.5em;
     border: 1px solid #a3a3a3;
     text-align: center;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
+    order: -1;
 }
 .radio-large.radio-content{
     padding:6px 30px;

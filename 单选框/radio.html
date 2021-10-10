@@ -39,9 +39,8 @@
         <div class="col-24" id="radio-basic">
             <div class="container">
                 <label  class="radio">
-                    <input type="radio" value="" >
-                    <div class="radio-circular"></div>
-                    Radio
+                    <input type="radio" value="">
+                    <div class="radio-circular">Radio</div>
                 </label>
             </div>
             <div class="container-content">
@@ -52,9 +51,8 @@
                 <pre>
                     <code>
 &ltlabel  class="radio">
-    &ltinput type="radio" value="" >
-    &ltdiv class="radio-circular">&lt/div>
-    Radio
+    &ltinput type="radio" value="">
+    &ltdiv class="radio-circular">Radio&lt/div>
 &lt/label>
                     </code>
                 </pre>
@@ -64,23 +62,19 @@
             <div class="container">  
                 <label  class="radio">
                     <input type="radio" value=""  name="compose">
-                    <div class="radio-circular"></div>
-                    A
+                    <div class="radio-circular">A</div>
                 </label>
                 <label class="radio">
-                    <input type="radio" value=""  name="compose">
-                    <div class="radio-circular"></div>
-                    B
+                    <input type="radio" value=""  name="compose" >
+                    <div class="radio-circular">B</div>
                 </label> 
                 <label class="radio">
-                    <input type="radio" value=""  name="compose">
-                    <div class="radio-circular"></div>
-                    C
+                    <input type="radio" value=""  name="compose" >
+                    <div class="radio-circular">C</div>
                 </label>
                 <label class="radio">
-                    <input type="radio" value=""  name="compose">
-                    <div class="radio-circular"></div>
-                    D
+                    <input type="radio" value=""  name="compose" >
+                    <div class="radio-circular">D</div>
                 </label>
             </div>
             <div class="container-content">
@@ -92,23 +86,19 @@
                     <code>
 &ltlabel  class="radio">
     &ltinput type="radio" value=""  name="compose">
-    &ltdiv class="radio-circular">&lt/div>
-    A
+    &ltdiv class="radio-circular">A&lt/div>
 &lt/label>
 &ltlabel class="radio">
     &ltinput type="radio" value=""  name="compose">
-    &ltdiv class="radio-circular">&lt/div>
-    B
+    &ltdiv class="radio-circular">B&lt/div>
 &lt/label> 
 &ltlabel class="radio">
     &ltinput type="radio" value=""  name="compose">
-    &ltdiv class="radio-circular">&lt/div>
-    C
+    &ltdiv class="radio-circular">C&lt/div>
 &lt/label>
 &ltlabel class="radio">
     &ltinput type="radio" value=""  name="compose">
-    &ltdiv class="radio-circular">&lt/div>
-    D
+    &ltdiv class="radio-circular">D&lt/div>
 &lt/label>
 &ltstyle>
     .radio:not(:last-child){
@@ -123,20 +113,17 @@
             <div class="container"> 
                 <label  class="radio">
                     <input type="radio" value="" name="small">
-                    <div class="radio-content radio-small">apple</div>
-                    
+                    <div class="radio-content radio-small">apple</div>   
                 </label>
                 <label  class="radio">
                     <input type="radio" value="" name="small">
-                    <div class="radio-content radio-small">banana</div>
-                    
+                    <div class="radio-content radio-small">banana</div>    
                 </label>
                 <br>
                 <br> 
                 <label class="radio">
                     <input type="radio" value="" name="medium">
-                    <div class="radio-content">apple</div>
-                    
+                    <div class="radio-content">apple</div>   
                 </label>
                 <label class="radio">
                     <input type="radio" value="" name="medium">
@@ -156,7 +143,7 @@
             <div class="container-content">
                 <div class="content">
                     <h3>单选框大小</h3>
-                    <p>使用radio-content配合radio-large，radio-small实现不同大小的文字单选框。</p>
+                <p>使用radio-content配合radio-large，radio-small实现不同大小的文字单选框。</p>
                 </div>
                 <pre>
                     <code>
@@ -201,45 +188,39 @@
             <div class="container">   
                 <label  class="radio">
                     <input type="radio" value="">
-                    <div class="radio-circular"></div>
-                    Radio-default
+                    <div class="radio-circular">Radio-default</div>    
                 </label>
                 <div class="size">
                     <label  class="radio"> 
                         <input type="radio" value="">
-                        <div class="radio-circular"></div>
-                        Radio-size
+                        <div class="radio-circular">Radio-size</div>    
                     </label>    
                 </div>
                 <div class="color">
                     <label  class="radio"> 
                         <input type="radio" value="">
-                        <div class="radio-circular"></div>
-                        Radio-color
+                        <div class="radio-circular">Radio-color</div>
                     </label> 
                 </div>
             </div>
             <div class="container-content">
                 <div class="content">
                     <h3>自定义单选框</h3>
-                    <p>通过改变radio或radio-block下的变量：--radio ，--radio-color ，--radio-shadow的值来改变单选框的样式。通过改变radio或radio-block下gap属性改变文字距圆点距离。</p>
+                    <p>通过改变radio或radio-block下的变量：--radio ，--radio-color ，--radio-shadow的值来改变单选框的样式。通过改变radio或radio-block下--radio改变文字与圆点距离。</p>
                 </div>
                 <pre>
                     <code>
 &ltlabel  class="radio">
     &ltinput type="radio" value="">
-    &ltdiv class="radio-circular">&lt/div>
-    Radio-default
+    &ltdiv class="radio-circular">Radio-default&lt/div>
 &lt/label>
 &ltlabel  class="radio">
     &ltinput type="radio" value="">
-    &ltdiv class="radio-circular">&lt/div>
-    Radio-size
+    &ltdiv class="radio-circular">Radio-size&lt/div>
 &lt/label>
 &ltlabel  class="radio">
     &ltinput type="radio" value="">
-    &ltdiv class="radio-circular">&lt/div>
-    Radio-color
+    &ltdiv class="radio-circular">Radio-color&lt/div>
 &lt/label>
 &ltstyle>
     .radio:nth-child(2){
@@ -261,13 +242,11 @@
             <div class="container">                   
                 <label  class="radio">
                     <input type="radio" value="" disabled>
-                    <div class="radio-circular"></div>
-                    <span>Disabled</span>
+                    <div class="radio-circular">Disabled</div>
                 </label>
                 <label  class="radio">
                     <input type="radio" value="" disabled checked>
-                    <div class="radio-circular"></div>
-                    <span>Disabled+Checked</span>
+                    <div class="radio-circular">Disabled+Checked</div>    
                 </label>
             </div>
             <div class="container-content">
@@ -279,13 +258,11 @@
                     <code>
 &ltlabel  class="radio">
     &ltinput type="radio" value="" disabled>
-    &ltdiv class="radio-circular">&lt/div>
-    &ltspan>Disabled&lt/span>
+    &ltdiv class="radio-circular">Disabled&lt/div>
 &lt/label>
 &ltlabel  class="radio">
     &ltinput type="radio" value="" disabled checked>
-    &ltdiv class="radio-circular">&lt/div>
-    &ltspan>Disabled+Checked&lt/span>
+    &ltdiv class="radio-circular">Disabled+Checked&lt/div>
 &lt/label>
 &ltstyle>
     .radio:not(:last-child){
@@ -300,23 +277,19 @@
             <div class="container">
                 <label class="radio-block">
                     <input type="radio" value="" name="Option">
-                    <div class="radio-circular"></div>
-                    Option-1
+                    <div class="radio-circular">Option-1</div>
                 </label>
                 <label class="radio-block">
                     <input type="radio" value="" name="Option">
-                    <div class="radio-circular"></div>
-                    Option-2
+                    <div class="radio-circular">Option-2</div>
                 </label>
                 <label class="radio-block">
                     <input type="radio" value="" name="Option">
-                    <div class="radio-circular"></div>
-                    Option-3
+                    <div class="radio-circular">Option-3</div>
                 </label>
                 <label class="radio-block">
                     <input type="radio" value="" name="Option">
-                    <div class="radio-circular"></div>
-                    Option-4
+                    <div class="radio-circular">Option-4</div>
                 </label>
             </div>
             <div class="container-content">
@@ -328,23 +301,19 @@
                     <code>
 &ltlabel class="radio-block">
     &ltinput type="radio" value="" name="Option">
-    &ltdiv class="radio-circular">&lt/div>
-    Option-1
+    &ltdiv class="radio-circular">Option-1&lt/div>
 &lt/label>
 &ltlabel class="radio-block">
     &ltinput type="radio" value="" name="Option">
-    &ltdiv class="radio-circular">&lt/div>
-    Option-2
+    &ltdiv class="radio-circular">Option-2&lt/div>
 &lt/label>
 &ltlabel class="radio-block">
     &ltinput type="radio" value="" name="Option">
-    &ltdiv class="radio-circular">&lt/div>
-    Option-3
+    &ltdiv class="radio-circular">Option-3&lt/div>
 &lt/label>
 &ltlabel class="radio-block">
     &ltinput type="radio" value="" name="Option">
-    &ltdiv class="radio-circular">&lt/div>
-    Option-4
+    &ltdiv class="radio-circular">Option-4&lt/div>
 &lt/label>
 &ltstyle>
     .radio-block:not(:last-child){
@@ -359,23 +328,19 @@
             <div class="container">
                 <label class="radio">
                     <input type="radio" value="" name="fruits-1">
-                    <div class="radio-circular"></div>
-                    apple
+                    <div class="radio-circular">apple</div> 
                 </label>
                 <label class="radio">
                     <input type="radio" value="" name="fruits-1">
-                    <div class="radio-circular"></div>
-                    banana
+                    <div class="radio-circular">banana</div>
                 </label>
                 <label class="radio">
                     <input type="radio" value="" name="fruits-1"disabled>
-                    <div class="radio-circular"></div>
-                    <span>orange</span>
+                    <div class="radio-circular">orange</div>
                 </label>
                 <label class="radio">
                     <input type="radio" value="" name="fruits-1"disabled checked>
-                    <div class="radio-circular"></div>
-                    <span>pear</span>
+                    <div class="radio-circular">pear</div>
                 </label>
                 <br>
                 <br>
@@ -423,23 +388,19 @@
                     <code>
 &ltlabel class="radio">
     &ltinput type="radio" value="" name="fruits-1">
-    &ltdiv class="radio-circular">&lt/div>
-    apple
+    &ltdiv class="radio-circular">apple&lt/div>
 &lt/label>
 &ltlabel class="radio">
     &ltinput type="radio" value="" name="fruits-1">
-    &ltdiv class="radio-circular">&lt/div>
-    banana
+    &ltdiv class="radio-circular">banana&lt/div>
 &lt/label>
 &ltlabel class="radio">
     &ltinput type="radio" value="" name="fruits-1"disabled>
-    &ltdiv class="radio-circular">&lt/div>
-    &ltspan>orange&lt/span>
+    &ltdiv class="radio-circular">orange&lt/div>
 &lt/label>
 &ltlabel class="radio">
     &ltinput type="radio" value="" name="fruits-1"disabled checked>
-    &ltdiv class="radio-circular">&lt/div>
-    &ltspan>pear&lt/span>
+    &ltdiv class="radio-circular">pear&lt/div>
 &lt/label>
 &ltbr>
 &ltbr>
