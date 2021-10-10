@@ -15,22 +15,22 @@
 }
 input{
     display: none;
+    order: -2;
 }
 .checkbox{
     display: inline-flex;
     align-items: center;
-    gap: 3px;
 }
 .checkbox-block{
     display: flex;
     align-items: center;
-    gap: 3px;
 }
 .checkbox-frame{
     display: inline-flex;
     align-items: center;
-    gap: calc(var(--checkbox) * 0.5);
+    gap: calc(var(--checkbox) * 0.3);
     position: relative;
+    order: -1;
 }
 .checkbox-frame::before{
     content: "";
@@ -40,7 +40,7 @@ input{
     border-radius: calc(var(--checkbox) * 0.2);
     background-color: transparent;
     order: -1;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
 }
 input:hover ~ .checkbox-frame::before{
     border-color: var(--checkbox-color) ;
@@ -62,7 +62,7 @@ input:checked ~ .checkbox-frame::before{
     left: calc(var(--checkbox) * 0.2);
     top: calc(var(--checkbox) * 0.4);
     transform:   translatey(60%) rotateZ(-45deg) scale(0);
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
 }
 input:checked ~ .checkbox-frame::after{
     transform:  translatey(-40%) rotateZ(-45deg) scale(1);
@@ -78,13 +78,7 @@ input:disabled:hover ~ .checkbox-frame::before {
 input:disabled ~ .checkbox-frame{
     color:#d9d9d9 ;
 }
-input:disabled ~ span{
-    color:#d9d9d9 ;
-}
 input:default:disabled ~ .checkbox-frame{
-    color:#d9d9d9 ;
-}
-input:default:disabled ~ span{
     color:#d9d9d9 ;
 }
 input:default:disabled ~ .checkbox-frame::before {
@@ -104,7 +98,8 @@ input:default:disabled ~ .checkbox-frame::after{
     line-height: 1.5em;
     border: 1px solid #a3a3a3;
     text-align: center;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
+    order: -1;
 }
 input:checked ~ .checkbox-content{
     border-color:var(--checkbox-color) ;
