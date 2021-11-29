@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./24layout.assembly.css">
+    <link rel="stylesheet" href="./button.assembly.css">
+    <title>Button</title>
+</head>
+<body>
+    <div class="header">
+        <h2>Button 按钮</h2>
+        <p>常用的各种类型的按钮</p>
+    </div>
+    <div class="layout" id="basics">
+        <h3>基础按钮</h3>
+        <p>在button标签中添加button类来实现基础按钮，而后通过添加各种不同的类名来实现不同的按钮样式。</p>
+        <div class="layout-img">
+            <div class="tr">
+                <button class="button button-default">Default</button>
+                <button class="button button-main">Primary</button>
+                <button class="button button-success">Success</button>
+                <button class="button button-info">Info</button>
+                <button class="button button-warn">Warning</button>
+                <button class="button button-danger">Danger</button>
+                <button class="button button-default">中文</button>
+            </div>
+            <!-- 朴素按钮 -->
+            <div class="tr">
+                <button class="button button-default plain">Plain</button>
+                <button class="button button-main plain">Primary</button>
+                <button class="button button-success plain">Success</button>
+                <button class="button button-info plain">Info</button>
+                <button class="button button-warn plain">Warning</button>
+                <button class="button button-danger plain">Danger</button>
+            </div>
+            <!-- 圆角按钮 -->
+            <div class="tr">
+                <button class="button button-default round">Round</button>
+                <button class="button button-main round">Primary</button>
+                <button class="button button-success round">Success</button>
+                <button class="button button-info round">Info</button>
+                <button class="button button-warn round">Warning</button>
+                <button class="button button-danger round">Danger</button>
+            </div>
+            <!-- 圆形图标按钮 -->
+            <div class="tr">
+                <button class="button button-default circle"><img src="./icon/sousuo.png" alt="search"></button>
+                <button class="button button-main circle"><img src="./icon/bianji-w.png" alt="edit"></button>
+                <button class="button button-success circle"><img src="./icon/duigou-w.png" alt="choice"></button>
+                <button class="button button-info circle"><img src="./icon/youjian_o-w.png" alt="mail"></button>
+                <button class="button button-warn circle"><img src="./icon/shoucang-w.png" alt="collect"></button>
+                <button class="button button-danger circle"><img src="./icon/shanchu-w.png" alt="delete"></button>
+            </div>
+        </div>
+        <div class="code">
+            <p>plain类代表朴素类型的按钮，round类代表圆角类型按钮，circle代表圆形图标按钮（不包含文字需要插入相应的图片）。
+                button-default类代表默认按钮(透明)，button-main类代表圆角主要按钮（蓝色），button-success代表圆形成功按钮（绿色），button-info代表圆形信息按钮（灰色）
+                button-warn类代表警告按钮(橙色)，button-danger类代表危险按钮(红色)。
+            </p>
+            <pre>
+                <code>
+&ltdiv class="tr">
+    &ltbutton class="button button-default">Default&lt/button>
+    &ltbutton class="button button-main">Primary&lt/button>
+    &ltbutton class="button button-success">Success&lt/button>
+    &ltbutton class="button button-info">Info&lt/button>
+    &ltbutton class="button button-warn">Warning&lt/button>
+    &ltbutton class="button button-danger">Danger&lt/button>
+    &ltbutton class="button button-default">中文&lt/button>
+&lt/div>
+&lt!-- 朴素按钮 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-default plain">Plain&lt/button>
+    &ltbutton class="button button-main plain">Primary&lt/button>
+    &ltbutton class="button button-success plain">Success&lt/button>
+    &ltbutton class="button button-info plain">Info&lt/button>
+    &ltbutton class="button button-warn plain">Warning&lt/button>
+    &ltbutton class="button button-danger plain">Danger&lt/button>
+&lt/div>
+&lt!-- 圆角按钮 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-default round">Round&lt/button>
+    &ltbutton class="button button-main round">Primary&lt/button>
+    &ltbutton class="button button-success round">Success&lt/button>
+    &ltbutton class="button button-info round">Info&lt/button>
+    &ltbutton class="button button-warn round">Warning&lt/button>
+    &ltbutton class="button button-danger round">Danger&lt/button>
+&lt/div>
+&lt!-- 圆形图标按钮 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-default circle">&ltimg src="./icon/sousuo.png" alt="search">&lt/button>
+    &ltbutton class="button button-main circle">&ltimg src="./icon/bianji-w.png" alt="edit">&lt/button>
+    &ltbutton class="button button-success circle">&ltimg src="./icon/duigou-w.png" alt="choice">&lt/button>
+    &ltbutton class="button button-info circle">&ltimg src="./icon/youjian_o-w.png" alt="mail">&lt/button>
+    &ltbutton class="button button-warn circle">&ltimg src="./icon/shoucang-w.png" alt="collect">&lt/button>
+    &ltbutton class="button button-danger circle">&ltimg src="./icon/shanchu-w.png" alt="delete">&lt/button>
+&lt/div>
+&ltstyle>
+    .tr{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+&lt/style>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="disabled">
+        <h3>禁用状态</h3>
+        <p>你可以使用 disabled 属性来定义按钮是否被禁用。</p>
+        <div class="layout-img">
+            <!-- 禁用 -->
+            <div class="tr">
+                <button class="button button-default" disabled>Default</button>
+                <button class="button button-main" disabled>Primary</button>
+                <button class="button button-success" disabled>Success</button>
+                <button class="button button-info" disabled>Info</button>
+                <button class="button button-warn" disabled>Warning</button>
+                <button class="button button-danger" disabled>Danger</button>
+                <button class="button button-default" disabled>中文</button>
+            </div>
+            <div class="tr">
+                <button class="button button-default plain" disabled>Plain</button>
+                <button class="button button-main plain" disabled>Primary</button>
+                <button class="button button-success plain" disabled>Success</button>
+                <button class="button button-info plain" disabled>Info</button>
+                <button class="button button-warn plain" disabled>Warning</button>
+                <button class="button button-danger plain" disabled>Danger</button>
+            </div>
+            <div class="tr">
+                <button class="button button-default circle" disabled><img src="./icon/sousuo.png" alt="search"></button>
+                <button class="button button-main circle" disabled><img src="./icon/bianji-w.png" alt="edit"></button>
+                <button class="button button-success circle" disabled><img src="./icon/duigou-w.png" alt="choice"></button>
+                <button class="button button-info circle" disabled><img src="./icon/youjian_o-w.png" alt="mail"></button>
+                <button class="button button-warn circle" disabled><img src="./icon/shoucang-w.png" alt="collect"></button>
+                <button class="button button-danger circle" disabled><img src="./icon/shanchu-w.png" alt="delete"></button>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过为button类元素添加disabled属性实现禁用按钮</p>
+            <pre>
+                <code>
+&lt!-- 禁用 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-default" disabled>Default&lt/button>
+    &ltbutton class="button button-main" disabled>Primary&lt/button>
+    &ltbutton class="button button-success" disabled>Success&lt/button>
+    &ltbutton class="button button-info" disabled>Info&lt/button>
+    &ltbutton class="button button-warn" disabled>Warning&lt/button>
+    &ltbutton class="button button-danger" disabled>Danger&lt/button>
+    &ltbutton class="button button-default" disabled>中文&lt/button>
+&lt/div>
+&ltdiv class="tr">
+    &ltbutton class="button button-default plain" disabled>Plain&lt/button>
+    &ltbutton class="button button-main plain" disabled>Primary&lt/button>
+    &ltbutton class="button button-success plain" disabled>Success&lt/button>
+    &ltbutton class="button button-info plain" disabled>Info&lt/button>
+    &ltbutton class="button button-warn plain" disabled>Warning&lt/button>
+    &ltbutton class="button button-danger plain" disabled>Danger&lt/button>
+&lt/div>
+&ltdiv class="tr">
+    &ltbutton class="button button-default circle" disabled>&ltimg src="./icon/sousuo.png" alt="search">&lt/button>
+    &ltbutton class="button button-main circle" disabled>&ltimg src="./icon/bianji-w.png" alt="edit">&lt/button>
+    &ltbutton class="button button-success circle" disabled>&ltimg src="./icon/duigou-w.png" alt="choice">&lt/button>
+    &ltbutton class="button button-info circle" disabled>&ltimg src="./icon/youjian_o-w.png" alt="mail">&lt/button>
+    &ltbutton class="button button-warn circle" disabled>&ltimg src="./icon/shoucang-w.png" alt="collect">&lt/button>
+    &ltbutton class="button button-danger circle" disabled>&ltimg src="./icon/shanchu-w.png" alt="delete">&lt/button>
+&lt/div>
+&ltstyle>
+    .tr{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+&lt/style>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="text">
+        <h3>文本按钮</h3>
+        <p>没有边框和背景色的按钮。</p>
+        <div class="layout-img">
+            <!-- 文本按钮 -->
+            <div class="tr">
+                <button class="button button-text">Text button</button>
+                <button class="button button-text" disabled>Text button</button>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过为button类元素添加button-text类实现纯文本按钮</p>
+            <pre>
+                <code>
+&lt!-- 文本按钮 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-text">Text button&lt/button>
+    &ltbutton class="button button-text" disabled>Text button&lt/button>
+&lt/div>
+&ltstyle>
+    .tr{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+&lt/style>
+                </code>
+            </pre>
+        </div>
+    </div>   
+    <div class="layout" id="img">
+        <h3>图标按钮</h3>
+        <p>使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。</p>
+        <div class="layout-img">
+            <!-- 图标按钮 -->
+            <div class="tr">
+                <button class="button button-icon"><img src="./icon/bianji-w.png" alt="edit"></button>
+                <button class="button button-icon"><img src="./icon/fenxiangxiao-w.png" alt="share"></button>
+                <button class="button button-icon"><img src="./icon/shanchu-w.png" alt="delete"></button>
+                <button class="button button-icon"><img src="./icon/sousuo-w.png" alt="search"><span>Search</span></button>
+                <button class="button button-icon"><span>Upload</span><img src="./icon/shangchuan-w.png" alt="upload"></button>
+                <button class="button button-icon" disabled><span>Upload</span><img src="./icon/shangchuan-w.png" alt="upload"></button>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过为button类元素button-icon，并插入相应的图片来为按钮添加图标。</p>
+            <pre>
+                <code>
+&lt!-- 图标按钮 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-icon">&ltimg src="./icon/bianji-w.png" alt="edit">&lt/button>
+    &ltbutton class="button button-icon">&ltimg src="./icon/fenxiangxiao-w.png" alt="share">&lt/button>
+    &ltbutton class="button button-icon">&ltimg src="./icon/shanchu-w.png" alt="delete">&lt/button>
+    &ltbutton class="button button-icon">&ltimg src="./icon/sousuo-w.png" alt="search">&ltspan>Search&lt/span>&lt/button>
+    &ltbutton class="button button-icon">&ltspan>Upload&lt/span>&ltimg src="./icon/shangchuan-w.png" alt="upload">&lt/button>
+    &ltbutton class="button button-icon" disabled>&ltspan>Upload&lt/span>&ltimg src="./icon/shangchuan-w.png" alt="upload">&lt/button>
+&lt/div>
+&ltstyle>
+    .tr{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+&lt/style>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="loading">
+        <h3>加载状态按钮</h3>
+        <p>点击按钮处于加载状态，向用户反馈数据的情况。</p>
+        <div class="layout-img">
+            <!-- 加载中 -->
+            <div class="tr">
+                <button class="button button-loading"><img src="./icon/jiazai-w.png" alt="loading"><span>Loading</span></button>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过为button类元素button-loading，并插入相应的图像来实现加载状态按钮。</p>
+            <pre>
+                <code>
+&lt!-- 加载中 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-loading">&ltimg src="./icon/jiazai-w.png" alt="loading">&ltspan>Loading&lt/span>&lt/button>
+&lt/div>
+&ltstyle>
+    .tr{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+&lt/style>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="layout" id="size">
+        <h3>各种尺寸的尺寸按钮</h3>
+        <p>除了默认的大小，按钮组件还提供了几种额外的尺寸可供选择，以便适配不同的场景。</p>
+        <div class="layout-img">
+            <!-- 不同大小的按钮 -->
+            <div class="tr-size">
+                <button class="button button-default">Default</button>
+                <button class="button button-default button-medium">Medium</button>
+                <button class="button button-default button-small">Small</button>
+                <button class="button button-default button-mini">Mini</button>
+            </div>
+        </div>
+        <div class="code">
+            <p>通过为button类元素添加相应的类实现不同大小的图标，除默认外还包含三种大小：button-medium，button-small，button-mini。</p>
+            <pre>
+                <code>
+&lt!-- 不同大小的按钮 -->
+&ltdiv class="tr">
+    &ltbutton class="button button-default">Default&lt/button>
+    &ltbutton class="button button-default button-medium">Medium&lt/button>
+    &ltbutton class="button button-default button-small">Small&lt/button>
+    &ltbutton class="button button-default button-mini">Mini&lt/button>
+&lt/div>
+&ltstyle>
+    .tr{
+        padding: 10px;
+        margin: 10px;
+    }
+&lt/style>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <nav class="nav">
+        <li>
+            <a href="#basics">基础按钮</a>
+        </li>
+        <li>
+            <a href="#disabled">禁用状态</a>
+        </li>
+        <li>
+            <a href="#text">文本按钮</a>
+        </li>
+        <li>
+            <a href="#img">图标按钮</a>
+        </li>
+        <li>
+            <a href="#loading">加载状态按钮</a>
+        </li>
+        <li>
+            <a href="#size">各种尺寸的尺寸按钮</a>
+        </li>
+        <li>
+            <a href="#">回到顶部</a>
+        </li>
+    </nav>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: 1.5vh;
+            border: 3px outset rgb(69, 184, 250);
+            border-radius: 20px;
+            padding: 30px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            background-color: white;
+        }
+        h2{
+            color: rgb(0, 140, 255);
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: 2px;
+        }
+        h3{
+            color: rgb(0, 140, 255);
+            font-size: 20px;
+            font-weight: 550;
+            line-height: 40px;
+            letter-spacing: 2px;
+        }
+        .tr{
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .tr-size{
+            padding: 10px;
+            margin: 10px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-indent: 2em;
+        }
+        .header{
+            margin-bottom: 30px;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .layout{ 
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .layout-img{
+            border:1px solid silver;
+            border-radius: 8px;
+            padding: 15px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+        .row{
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 4px;
+            border-radius: 5px;
+            background-color: rgb(233, 236, 236);
+        }
+        .row>div{
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(20, 129, 255);
+            text-align: center;
+            line-height: 30px;
+        }
+        .row>div:nth-child(even){
+            background-color: rgb(1, 207, 235);
+        }
+        .code{
+            
+            border:1px solid silver;
+            border-radius: 8px;
+            padding:10px 20px 0px;
+            
+        }
+        code{
+            display: block;
+            overflow: auto;
+            width: 100%;
+            color:rgb(0, 17, 255);
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            filter: brightness(120%);
+        }
+        pre{
+            border-top: 1px silver solid;
+        }
+        .align-start,.align-center,.align-end{
+            height: 90px;
+        }
+        nav{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            width: 18%;
+            left: 10px;
+            top: 10px;
+            border: 3px outset rgb(69, 184, 250);
+            border-radius: 8px;
+            background-color: white;
+            padding-top: 1vh;
+            padding-left: 1vh;
+            padding-right: 0.5vh;
+        }
+        li{
+            border-radius: 8px;
+            padding: 0px 3px;
+            text-align: center;
+            height: 7vh;
+            margin-bottom: 1vh;
+            border: 3px outset rgb(82, 81, 81);
+            background-color: rgb(165, 165, 165);
+        }
+        
+        li:hover>a{
+            color: rgb(27, 27, 37);
+        }
+        li:hover{
+            border: 3px outset rgb(99, 99, 99);
+            background-color: rgb(230, 230, 230);
+        }
+        li:active{
+            border: 3px inset rgb(56, 56, 56);
+            background-color: rgb(165, 165, 165);
+        }
+        li:active>a{
+            color: white;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height:calc(7vh - 8px);
+            width: 100%;
+            height: 100%;
+        }
+        html{
+            background-color: rgb(197, 222, 223);
+            scroll-behavior: smooth;
+        }
+        body::-webkit-scrollbar{
+            width: 0.8vw;
+            background-color: rgb(190, 190, 190);
+            border-radius: 1233px;
+        }
+        body::-webkit-scrollbar-thumb{
+            width: 0.8vw;
+            background-color:rgb(0, 174, 255) ;
+            border: solid 0.2vw rgb(0, 174, 255);
+            border-radius: 1233px;
+        }
+    </style>
