@@ -1,0 +1,342 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+.tr{
+    padding: 10px;
+    margin: 10px;
+}
+button{
+    appearance:none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+/* 按钮默认情况下样式 */
+.button{
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    text-align: center;
+    outline: none;
+    margin: 0;
+    font-family: inherit;
+    font-weight: 550;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: white;
+}
+.button-default:focus,.button-default:hover{
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+.button-default:active{
+    color: #409eff;
+    border-color: #409eff;
+    background-color: #ecf5ff;
+}
+.button-main{
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+}
+.button-main:focus,.button-main:hover{
+    background: #76b8ff;
+    border-color: #76b8ff;
+}
+.button-main:active{
+    background-color: #1a81e7;
+    border-color: #1a81e7;
+}
+.button-success{
+    color: #fff;
+    background-color: #67c23a;
+    border-color: #67c23a;
+}    
+.button-success:focus,.button-success:hover{
+    background: #85ce61;
+    border-color: #85ce61;
+}
+.button-success:active{
+    background-color: #50ac21;
+    border-color: #50ac21;
+}
+.button-info{
+    color: #fff;
+    background-color: #909399;
+    border-color: #909399;
+}    
+.button-info:focus,.button-info:hover{
+    background: #a6a9ad;
+    border-color: #a6a9ad;
+}
+.button-info:active{
+    background-color: #737986;
+    border-color: #737986;
+}
+.button-warn{
+    color: #fff;
+    background-color: #e6a23c;
+    border-color: #e6a23c;
+} 
+.button-warn:focus,.button-warn:hover{
+    background: #ebb563;
+    border-color: #ebb563;
+}
+.button-warn:active{
+    background-color: #ff9f0e;
+    border-color: #ff9f0e;
+}
+.button-danger{
+    color: #fff;
+    background-color: #fa5d5d;
+    border-color: #fa5d5d
+}    
+.button-danger:focus,.button-danger:hover{
+    background-color: #fd8484;
+    border-color: #fd8484
+}
+.button-danger:active{
+    background-color: #fa3c3c;
+    border-color: #fa3c3c
+}
+
+/* 朴素按钮样式 */
+.button-main.plain{
+    color: #409eff;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+}
+.button-main.plain:focus,.button-main.plain:hover{
+    color: #fff;
+    background: #409eff;
+    border-color: #409eff;
+}
+.button-main.plain:active{
+    color: #fff;
+    background-color: #1a81e7;
+    border-color: #1a81e7;
+}
+.button-success.plain{
+    color: #67c23a;
+    background: #f0f9eb;
+    border-color: #c2e7b0;
+}    
+.button-success.plain:focus,.button-success.plain:hover{
+    color: #fff;
+    background-color: #67c23a;
+    border-color: #67c23a;
+}
+.button-success.plain:active{
+    color: #fff;
+    background-color: #50ac21;
+    border-color: #50ac21;
+}
+.button-info.plain{
+    color: #909399;
+    background: #f4f4f5;
+    border-color: #d3d4d6;
+}    
+.button-info.plain:focus,.button-info.plain:hover{
+    color: #fff;
+    background-color: #909399;
+    border-color: #909399;
+}
+.button-info.plain:active{
+    color: #fff;
+    background-color: #737986;
+    border-color: #737986;
+}
+.button-warn.plain{
+    color: #e6a23c;
+    background: #fdf6ec;
+    border-color: #f5dab1;
+}    
+.button-warn.plain:focus,.button-warn.plain:hover{
+    color: #fff;
+    background-color: #e6a23c;
+    border-color: #e6a23c;
+}
+.button-warn.plain:active{
+    color: #fff;
+    background-color: #ff9f0e;
+    border-color: #ff9f0e;
+}
+.button-danger.plain{
+    color: #f56c6c;
+    background: #fef0f0;
+    border-color: #fbc4c4;
+}    
+.button-danger.plain:focus,.button-danger.plain:hover{
+    color: #fff;
+    background-color: #fa5d5d;
+    border-color: #fa5d5d
+}
+.button-danger.plain:active{
+    color: #fff;
+    background-color: #fa3c3c;
+    border-color: #fa3c3c
+}
+
+/* 圆角按钮 */
+.button.round{
+    border-radius: 20px;
+    padding: 12px 23px;
+}
+/* 圆形图标按钮 */
+.button.circle{
+    border-radius: 50%;
+    padding: 7px 8px;
+    text-align: center;
+}
+
+/* 按钮禁用状态 */
+.button:disabled{
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+/* 默认，圆角，圆形图标按钮禁用状态 */
+.button-default:disabled:hover{
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    background-color: white;
+}
+.button-main:disabled:hover{
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+}
+.button-success:disabled:hover{
+    color: #fff;
+    background-color: #67c23a;
+    border-color: #67c23a;
+}
+.button-info:disabled:hover{
+    color: #fff;
+    background-color: #909399;
+    border-color: #909399;
+}
+.button-warn:disabled:hover{
+    color: #fff;
+    background-color: #e6a23c;
+    border-color: #e6a23c;
+}
+.button-danger:disabled:hover{
+    color: #fff;
+    background-color: #fa5d5d;
+    border-color: #fa5d5d
+}
+/* 朴素按钮禁用状态 */
+.button-main.plain:disabled:hover{
+    color: #409eff;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+}
+.button-success.plain:disabled:hover{
+    color: #67c23a;
+    background: #f0f9eb;
+    border-color: #c2e7b0;
+}
+.button-info.plain:disabled:hover{
+    color: #909399;
+    background: #f4f4f5;
+    border-color: #d3d4d6;
+}
+.button-warn.plain:disabled:hover{
+    color: #e6a23c;
+    background: #fdf6ec;
+    border-color: #f5dab1;
+}
+.button-danger.plain:disabled:hover{
+    color: #f56c6c;
+    background: #fef0f0;
+    border-color: #fbc4c4;
+}
+/* 文本按钮 */
+.button.button-text{
+    border-color: transparent;
+    color: #409eff;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+.button.button-text:hover,.button.button-text:focus{
+    opacity: 0.7;
+}
+.button.button-text:active{
+    color: #0362c0;
+}
+.button.button-text:disabled{
+    opacity: 0.7;
+    color: black;
+}
+/* 图标按钮样式 */
+.button.button-icon{
+    background-color: #409eff;
+    border-color: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    line-height: 18px;
+    border: 1px solid transparent;
+    height: 40px;
+}
+.button.button-icon span{
+    display: inline-block;
+    transform: translateY(-3px);
+    margin: 0px 5px;
+}
+.button.button-icon:hover,.button.button-icon:focus{
+    opacity: 0.8;
+}
+.button.button-icon:active{
+    background-color: #1a6fc4;
+}
+.button.button-icon:disabled:hover,.button.button-icon:disabled:focus{
+    opacity: 0.6;
+}
+.button.button-icon:disabled:active{
+    opacity: 0.6;
+    background-color: #409eff;
+}
+/* 加载按钮样式 */
+.button.button-loading{
+    background-color: #409eff;
+    border-color: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    line-height: 18px;
+    border: 1px solid transparent;
+    height: 40px;
+    opacity: 0.7;
+}
+.button.button-loading img{
+    animation: loading linear 1s infinite;
+}
+@keyframes loading {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.button.button-loading span{
+    display: inline-block;
+    transform: translateY(-3px);
+    margin: 0px 5px;
+}
+/* 不同大小的按钮 */
+.button.button-medium{
+    padding: 10px 17px;
+}
+.button.button-small{
+    padding: 8px 15px;
+}
+.button.button-mini{
+    padding: 6px 13px;
+}
