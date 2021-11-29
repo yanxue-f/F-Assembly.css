@@ -60,5 +60,22 @@
 >>>>+ 自定义多选框:通过改变checkbox或checkbox-block下的变量：--checkbox ，--checkbox-color ，--checkbox-shadow的值来改变多选框的样式。通过改变checkbox或checkbox-block下的--checkbox改变文字距离方片的距离。
 >>>(详细内容请查看演示 [checkbox] <https://fan-aoqiang.gitee.io/f-assembly.css/checkbox/>)
 
+>>>5.button
+
+>>>>+ 基础按钮：在button标签中添加button类来实现基础按钮，而后通过添加各种不同的类名来实现不同的按钮样式。
+>>>>>+ plain类代表朴素类型的按钮，round类代表圆角类型按钮，circle代表圆形图标按钮（不包含文字需要插入相应的图片）。
+>>>>>+  button-default类代表默认按钮(透明)
+>>>>>+ button-main类代表圆角主要按钮（蓝色）
+>>>>>+ button-success代表圆形成功按钮（绿色）
+>>>>>+ button-info代表圆形信息按钮（灰色）
+>>>>>+ button-warn类代表警告按钮(橙色)
+>>>>>+ button-danger类代表危险按钮(红色)。
+>>>>+ 禁用状态：通过为button类元素添加disabled属性实现禁用按钮。
+>>>>+ 文本按钮：没有边框和背景色的按钮,通过为button类元素添加button-text类实现纯文本按钮。
+>>>>+ 图标按钮:使用图标为按钮添加更多的含义,你也可以单独使用图标不添加文字来节省显示区域占用。
+>>>>+ 加载状态按钮：点击按钮处于加载状态，向用户反馈数据的情况。
+>>>>+ 各种尺寸的尺寸按钮：除了默认的大小，按钮组件还提供了几种额外的尺寸可供选择，以便适配不同的场景。
+>>>(详细内容请查看演示 [checkbox] <https://fan-aoqiang.gitee.io/f-assembly.css/Button/>)
+
 
 > 欢迎来到“临汾追梦软件编程”和老孟一起学习前端技术，打造IT精英。联系电话：13466966818.
